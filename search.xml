@@ -18,8 +18,8 @@
     <url>%2F2018%2F02%2F02%2FHexo-snext%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[寒假前无意间看到高年级的学长自己做的博客网站，很精美！动心了之后决定自己做一个“高仿版” 。以上是效果图 古人云：工欲成其事必先利其器。在互联网高度发达的今天，知识很容易被检索到，在纷繁世界中进行知识的筛选已经成了做事情前一项非常必要的预备工作。 下面的这些链接是我在搭建过程中筛选过的文章，希望它能帮助你节省去筛选有用干货的时间帮助你搭建自己的个人精美博客。官方文档首先是最权威的： 文档 | Hexo https://hexo.io/zh-cn/docs/index.html内容包括：什么是 Hexo？安装安装前提安装 Git安装 Node.js安装 Hexo 开始使用 - NexT 使用文档 http://theme-next.iissnan.com/getting-started.html内容包括：安装 NexT主题设定集成第三方服务友情提示：在你对next主题进行个性化设置之前请务必把官方文档看一遍，因为它已经比较全面，可以帮助你解决一半的问题。 网上的实用链接给予的个性化帮助更多：1.自己动手搭建个人博客到优化 - CSDN博客 http://blog.csdn.net/nijun914/article/details/758088392.Hexo的Next主题配置 - syd192 - 博客园 http://www.cnblogs.com/syd192/p/6074323.html3.hexo的next主题个性化教程：打造炫酷网站 - 距离的博客 - CSDN博客 http://blog.csdn.net/qq_33699981/article/details/727169514.Hexo博客之主题美化 - 简书 https://www.jianshu.com/p/70dbff8d76085.hexo高阶教程：next主题优化之加入网易云音乐、网易云跟帖、炫酷动态背景、自定义样式，打造… - 简书 https://www.jianshu.com/p/76ce3729746d6.Hexo中播放网易云音乐的实践 http://weqeo.com/2016/10/11/Hexo%E4%B8%AD%E6%92%AD%E6%94%BE%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E7%9A%84%E5%AE%9E%E8%B7%B5/ 其他有用的链接：判断想要设置的背景颜色具体名称：HEX color - HTML CSS Color http://www.htmlcsscolor.com/hex/F5F5F5在hexo上的编辑文章：Markdown语法说明 - 时光 • 印记 http://erikge.com/articles/markdownSyntax/小图标网站：Icons | Icons | Font Awesome https://fontawesome.com/icons?d=gallery]]></content>
       <categories>
-        <category>随笔</category>
-        <category>安装实例</category>
+        <category>hexo</category>
+        <category>安装教程</category>
       </categories>
       <tags>
         <tag>hexo</tag>
