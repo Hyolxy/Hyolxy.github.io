@@ -88,7 +88,7 @@
 <meta property="og:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/JS操作DOM对象和常用全局函数总结DOM.jpg">
-<meta property="og:updated_time" content="2018-03-30T13:45:43.863Z">
+<meta property="og:updated_time" content="2018-03-30T13:47:00.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS操作DOM对象和常用全局函数总结">
 <meta name="twitter:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
@@ -433,39 +433,16 @@
 <p>{<br>delete p. name;<br>delete p.func;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">### JS中对象的构造方法</span><br><span class="line">*基于原型的构造方法*</span><br></pre></td></tr></table></figure></p>
 <p>function person( name, age)<br>{<br>      this. name= name;<br>      this. age=age;<br>     this. func=speak();//函数也可以直接构造<br>}```</p>
 <h2 id="js全局函数"><a href="#js全局函数" class="headerlink" title="js全局函数"></a>js全局函数</h2><p><em>常用全局函数 </em> （全局函数不属于任何一个自己定义的对象）</p>
-<p><em>Eval()</em>  执行函数专门用来执行代码的<br>动态的执行代码</p>
-<p>1、将字符串解析为可执行的JavaScript语句</p>
-<p>2、可以将字符串（符合对象格式的）转化为对象类型</p>
-<p><em>escape()</em>: 对字符串进行编码</p>
-<p>该函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。</p>
+<p><em>Eval()</em>  执行函数专门用来执行代码的<br>动态的执行代码<br>1、将字符串解析为可执行的JavaScript语句<br>2、可以将字符串（符合对象格式的）转化为对象类型</p>
+<p><em>escape()</em>: 对字符串进行编码<br>该函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。</p>
 <ul>
 <li>注意：该函数不能用于编码 URIs(通用资源标识符（UniformResourceIdentifier,简称”URI”））<em>
 </em>unescape()*: 解码由escape()编码的字符串</li>
 </ul>
-<p><em>encodeURI</em> :对字符进行编码</p>
-<p><em>decodeURI</em> :对字符进行解码</p>
-<p><em>isNaN()</em>:  判断当前是否是数字，返回值true false,是数字返回false,不是数字返回true;</p>
-<p><em>parseInt()</em> 类型转换</p>
-<p><em>Number(object)</em>:把对象的值转换为数字</p>
-<p>　　<em>如果对象的值无法转换为数字，Number()函数返回NaN。</em></p>
-<p>　　<em>如果参数的Date对象，Number()返回从1970年1月1日到现在所经历的毫秒数</em></p>
-<p><em>String()</em>:把对象的值转换为字符串</p>
-<p>String() 函数返回与字符串对象的toString()方法值一样</p>
-<h3 id="JavaScript-window的几个常用方法"><a href="#JavaScript-window的几个常用方法" class="headerlink" title="JavaScript. window的几个常用方法"></a>JavaScript. window的几个常用方法</h3><p><em>alert()</em> 全局方法，可以弹出一个警告框。</p>
-<p>然而实际上，它是window对象的一部分。<br>也就是说，完整的写法如下:   window.alert();</p>
-<p><em>parseInt()</em>;  全局方法，可以将变量强转为整数</p>
-<p>完整的写法如下：</p>
-<p><em>window.parseInt()</em>;</p>
-<p><em>confirm()</em> 确认函数</p>
-<p>用户交互、有boolean返回值；是一个阻塞式的方法，alert（）也是阻塞式方法</p>
-<p><em>promote()</em></p>
-<p>接收用户的反馈信息，返回值是字符串</p>
-<p><em>setinterval(int n)</em>载入几次</p>
-<p><em>Window. onload()</em>当文本全部加载完成后</p>
-<p>当页面加载完成的时候，触发该事件的发生，如果该事件绑定了函数，即执行该函数</p>
-<p><em>Window. onresize()</em>当窗口大小发生改变后</p>
-<p><em>settime(，)</em>多长时间刷新一次</p>
-<p>settime()第一个参数是函数名，第二个是时间，单位是毫秒，500毫秒为5秒</p>
+<p><em>encodeURI</em> :对字符进行编码<br><em>decodeURI</em> :对字符进行解码<br><em>isNaN()</em>:  判断当前是否是数字，返回值true false,是数字返回false,不是数字返回true;<br><em>parseInt()</em> 类型转换<br><em>Number(object)</em>:把对象的值转换为数字<br>　　<em>如果对象的值无法转换为数字，Number()函数返回NaN。</em><br>　　<em>如果参数的Date对象，Number()返回从1970年1月1日到现在所经历的毫秒数</em><br><em>String()</em>:把对象的值转换为字符串<br>String() 函数返回与字符串对象的toString()方法值一样</p>
+<h3 id="JavaScript-window的几个常用方法"><a href="#JavaScript-window的几个常用方法" class="headerlink" title="JavaScript. window的几个常用方法"></a>JavaScript. window的几个常用方法</h3><p><em>alert()</em> 全局方法，可以弹出一个警告框。<br>然而实际上，它是window对象的一部分。<br>也就是说，完整的写法如下:   window.alert();</p>
+<p><em>parseInt()</em>;  全局方法，可以将变量强转为整数<br>完整的写法如下：</p>
+<p><em>window.parseInt()</em>;<br><em>confirm()</em> 确认函数<br>用户交互、有boolean返回值；是一个阻塞式的方法，alert（）也是阻塞式方法<br><em>promote()</em><br>接收用户的反馈信息，返回值是字符串<br><em>setinterval(int n)</em>载入几次<br><em>Window. onload()</em>当文本全部加载完成后<br>当页面加载完成的时候，触发该事件的发生，如果该事件绑定了函数，即执行该函数<br><em>Window. onresize()</em>当窗口大小发生改变后<br><em>settime(，)</em>多长时间刷新一次<br>settime()第一个参数是函数名，第二个是时间，单位是毫秒，500毫秒为5秒</p>
 <p><em>定时器 setTimeout</em></p>
 <pre><code>
 setTimeout(function(){
