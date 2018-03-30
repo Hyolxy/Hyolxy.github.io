@@ -88,7 +88,7 @@
 <meta property="og:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/JS操作DOM对象和常用全局函数总结DOM.jpg">
-<meta property="og:updated_time" content="2018-03-30T14:02:03.728Z">
+<meta property="og:updated_time" content="2018-03-30T14:04:24.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS操作DOM对象和常用全局函数总结">
 <meta name="twitter:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
@@ -434,12 +434,8 @@ var  p=new object();
 p.name=&quot; jack&quot;;//(动态语言才可以，java不可以)
 alert( p. name);//直接输出成功
 }
-</code></pre><h3 id="动态的添加属性和方法"><a href="#动态的添加属性和方法" class="headerlink" title="动态的添加属性和方法"></a>动态的添加属性和方法</h3><p>添加属性时也比较方便直接<br>This is a sample code block.</p>
-<pre><code>{
-</code></pre><p>  p.func= speak;<br>  p.func(“ hello  hello 大家好)”);<br>} </p>
-<h3 id="动态的删除属性和方法"><a href="#动态的删除属性和方法" class="headerlink" title="动态的删除属性和方法"></a>动态的删除属性和方法</h3><p>用delete删除<br>This is a sample code block.</p>
-<pre><code>{
-</code></pre><p>delete p. name;<br>delete p.func;<br>} </p>
+</code></pre><h3 id="动态的添加属性和方法"><a href="#动态的添加属性和方法" class="headerlink" title="动态的添加属性和方法"></a>动态的添加属性和方法</h3><p>添加属性时也比较方便直接<br>  p.func= speak;<br>  p.func(“ hello  hello 大家好)”);</p>
+<h3 id="动态的删除属性和方法"><a href="#动态的删除属性和方法" class="headerlink" title="动态的删除属性和方法"></a>动态的删除属性和方法</h3><p>用delete删除<br>delete p. name;<br>delete p.func;</p>
 <h3 id="JS中对象的构造方法"><a href="#JS中对象的构造方法" class="headerlink" title="JS中对象的构造方法"></a>JS中对象的构造方法</h3><p><em>基于原型的构造方法</em><br>This is a sample code block.</p>
 <pre><code>function person( name, age)
 </code></pre><p>{<br>      this. name= name;<br>      this. age=age;<br>     this. func=speak();//函数也可以直接构造<br>} </p>
