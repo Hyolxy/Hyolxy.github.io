@@ -88,7 +88,7 @@
 <meta property="og:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/JS操作DOM对象和常用全局函数总结DOM.jpg">
-<meta property="og:updated_time" content="2018-03-30T14:04:24.029Z">
+<meta property="og:updated_time" content="2018-03-30T14:06:30.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS操作DOM对象和常用全局函数总结">
 <meta name="twitter:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
@@ -435,11 +435,16 @@ p.name=&quot; jack&quot;;//(动态语言才可以，java不可以)
 alert( p. name);//直接输出成功
 }
 </code></pre><h3 id="动态的添加属性和方法"><a href="#动态的添加属性和方法" class="headerlink" title="动态的添加属性和方法"></a>动态的添加属性和方法</h3><p>添加属性时也比较方便直接<br>  p.func= speak;<br>  p.func(“ hello  hello 大家好)”);</p>
-<h3 id="动态的删除属性和方法"><a href="#动态的删除属性和方法" class="headerlink" title="动态的删除属性和方法"></a>动态的删除属性和方法</h3><p>用delete删除<br>delete p. name;<br>delete p.func;</p>
+<h3 id="动态的删除属性和方法"><a href="#动态的删除属性和方法" class="headerlink" title="动态的删除属性和方法"></a>动态的删除属性和方法</h3><p>用delete删除<br>This is a sample code block.</p>
+<p>   delete p. name;<br>    delete p.func;</p>
 <h3 id="JS中对象的构造方法"><a href="#JS中对象的构造方法" class="headerlink" title="JS中对象的构造方法"></a>JS中对象的构造方法</h3><p><em>基于原型的构造方法</em><br>This is a sample code block.</p>
 <pre><code>function person( name, age)
-</code></pre><p>{<br>      this. name= name;<br>      this. age=age;<br>     this. func=speak();//函数也可以直接构造<br>} </p>
-<h2 id="js全局函数"><a href="#js全局函数" class="headerlink" title="js全局函数"></a>js全局函数</h2><h3 id="常用全局函数"><a href="#常用全局函数" class="headerlink" title="常用全局函数"></a>常用全局函数</h3><p>（全局函数不属于任何一个自己定义的对象）</p>
+{
+  this. name= name;
+  this. age=age;
+  this. func=speak();//函数也可以直接构造
+} 
+</code></pre><h2 id="js全局函数"><a href="#js全局函数" class="headerlink" title="js全局函数"></a>js全局函数</h2><h3 id="常用全局函数"><a href="#常用全局函数" class="headerlink" title="常用全局函数"></a>常用全局函数</h3><p>（全局函数不属于任何一个自己定义的对象）</p>
 <p><em>Eval()</em>  执行函数专门用来执行代码的<br>动态的执行代码<br>1、将字符串解析为可执行的JavaScript语句<br>2、可以将字符串（符合对象格式的）转化为对象类型</p>
 <p><em>escape()</em>: 对字符串进行编码<br>该函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。</p>
 <ul>
