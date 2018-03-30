@@ -88,7 +88,7 @@
 <meta property="og:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/JS操作DOM对象和常用全局函数总结DOM.jpg">
-<meta property="og:updated_time" content="2018-03-19T13:21:27.306Z">
+<meta property="og:updated_time" content="2018-03-30T12:44:47.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS操作DOM对象和常用全局函数总结">
 <meta name="twitter:description" content="DOM：Document  Object  Modeldocument对象是DOM核心对象作用：对html中的内容、属性、样式进行操作节点树中节点之间的关系：父子、兄弟">
@@ -421,30 +421,19 @@
 
       
          <img src="/images/JS操作DOM对象和常用全局函数总结DOM.jpg" width="900" height="445">
-<p>DOM：Document  Object  Model<br>document对象是DOM核心对象<br>作用：对html中的内容、属性、样式进行操作<br>节点树中节点之间的关系：父子、兄弟<a id="more"></a><br>                                                         JS操作DOM对象:</p>
-<p>1.很多时候需要访问DOM中的元素，主要通过getElementById(),</p>
+<p>DOM：Document  Object  Model<br>document对象是DOM核心对象<br>作用：对html中的内容、属性、样式进行操作<br>节点树中节点之间的关系：父子、兄弟<a id="more"></a> </p>
+<pre><code>##JS操作DOM对象:
+</code></pre><p>###1.访问DOM中的元素<br>很多时候需要访问DOM中的元素，主要通过getElementById(),</p>
 <p>getElementsByTagName(),</p>
 <p>getElementsByClassName()方法获取 </p>
-<p>2.给DOM中元素添加属性</p>
-<ol>
-<li><p>在DOM元素中插入内容</p>
-<pre><code> 
-{ 
-<div id="context">Hello,2017</div> 
-document.getElementById("context").innerHTML="节日快乐";
-
-}
-</code></pre>
-
-
-</li>
-</ol>
+<p>###2.给DOM中元素添加属性</p>
+<p>###3.在DOM元素中插入内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line">   &lt;div id=<span class="string">"context"</span>&gt;Hello,2017&lt;/div&gt; </span><br><span class="line">   document.getElementById(<span class="string">"context"</span>).innerHTML=<span class="string">"节日快乐"</span>;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
 <p>譬如：</p>
 <p>js定义函数，DOM对象的onclick=”函数名”来执行函数 </p>
-<p>修改Dom节点</p>
+<p>###修改Dom节点</p>
 <p>可以修改节点的样式。</p>
 <p>获得style对象，然后更改对象的某项值即可</p>
-<p>添加DOM对象</p>
+<p>###添加DOM对象</p>
 <p>两种方法</p>
 <p>:前加，追加</p>
 <p>步骤大致是：</p>
@@ -452,34 +441,12 @@ document.getElementById("context").innerHTML="节日快乐";
 <p>然后：<br>1.Insert Before()前加元素</p>
 <p>有两个参数，前面的是已经存在的DOM对象，后面的是要添加的对象</p>
 <p>2.appendChild()在dom中追加元素</p>
-<p>删除Dom对象</p>
+<p>###删除Dom对象</p>
 <p>先get父亲节点以及子节点</p>
 <p>然后用remove函数，就可以了</p>
-<p>JavaScript对象</p>
-<p>对象的定义</p>
-<p>var  p=new object()</p>
-<p>p.name=” jack”(动态语言才可以，java不可以)</p>
-<p>alert( p. name)直接输出成功</p>
-<p>动态的添加属性和方法</p>
-<p>p. func= speak;</p>
-<p>p. func(“ hello  hello 大家好)”)</p>
-<p>动态的删除属性和方法</p>
-<p>delete p. name<br>delete p.func</p>
-<p>JS中对象的构造方法</p>
-<p>基于原型的</p>
-<pre><code>
-function person( name, age)
-{
-      this. name= name;
-      this. age=age;
-.     this. func=speak()函数也可以直接构造
-}
-</code></pre>
-
-
-
-
-<p>js全局函数</p>
+<p>##JavaScript对象</p>
+<p>###对象的定义<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var  p=new object()</span><br><span class="line"></span><br><span class="line">p.name=<span class="string">" jack"</span>(动态语言才可以，java不可以)</span><br><span class="line"></span><br><span class="line">alert( p. name)直接输出成功</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">###动态的添加属性和方法</span></span><br><span class="line">``` bash</span><br><span class="line"></span><br><span class="line">p. func= speak;</span><br><span class="line"></span><br><span class="line">p. func(<span class="string">" hello  hello 大家好)"</span>)</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">###动态的删除属性和方法</span></span><br><span class="line">``` bash</span><br><span class="line">delete p. name</span><br><span class="line">delete p.func</span><br><span class="line">``` </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="comment">##JS中对象的构造方法</span></span><br><span class="line"></span><br><span class="line">基于原型的</span><br><span class="line">``` bash</span><br><span class="line"><span class="keyword">function</span> person( name, age)</span><br><span class="line">&#123;</span><br><span class="line">      this. name= name;</span><br><span class="line">      this. age=age;</span><br><span class="line">.     this. func=speak()函数也可以直接构造</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##js全局函数</p>
 <p><em>常用全局函数 </em> （全局函数不属于任何一个自己定义的对象）</p>
 <p><em>Eval()</em>  执行函数专门用来执行代码的<br>动态的执行代码</p>
 <p>1、将字符串解析为可执行的JavaScript语句</p>
@@ -499,7 +466,7 @@ function person( name, age)
 <p>　　如果参数的Date对象，Number()返回从1970年1月1日到现在所经历的毫秒数</p>
 <p><em>String()</em>:把对象的值转换为字符串</p>
 <p>String() 函数返回与字符串对象的toString()方法值一样</p>
-<p>JavaScript. window的几个常用方法</p>
+<p>###JavaScript. window的几个常用方法</p>
 <p><em>alert()</em> 全局方法，可以弹出一个警告框。</p>
 <p>然而实际上，它是window对象的一部分。  也就是说，完整的写法如下:   window.alert();</p>
 <p><em>parseInt()</em>;  全局方法，可以将变量强转为整数</p>
@@ -521,6 +488,9 @@ setTimeout(function(){
      alert();
 },1000);      //表示该函数延迟1000毫秒执行
 </code></pre>
+
+<p>More info: <a href="https://blog.csdn.net/hyo555/article/details/79615618" target="_blank" rel="noopener">我的CSDNblog</a></p>
+
       
     </div>
     
