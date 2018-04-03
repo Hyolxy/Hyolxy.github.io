@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Markdown使用笔记]]></title>
+    <url>%2F2018%2F03%2F31%2FMarkdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[git使用笔记]]></title>
+    <url>%2F2018%2F03%2F31%2Fgit%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>开发</category>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>git常用指令</tag>
+        <tag>开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[web开发学习笔记-Ajax笔记]]></title>
+    <url>%2F2018%2F03%2F31%2Fweb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Ajax%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[web开发学习笔记-json笔记]]></title>
+    <url>%2F2018%2F03%2F31%2Fweb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-json%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[web开发学习笔记-CSS布局经典问题整理]]></title>
+    <url>%2F2018%2F03%2F31%2Fweb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[web开发学习笔记-DOM基础篇]]></title>
+    <url>%2F2018%2F03%2F31%2Fweb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-DOM%E5%9F%BA%E7%A1%80%E7%AF%87%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[web开发学习笔记-CSS基础篇]]></title>
+    <url>%2F2018%2F03%2F31%2Fweb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-CSS%E5%9F%BA%E7%A1%80%E7%AF%87%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[web开发学习笔记-Html篇]]></title>
+    <url>%2F2018%2F03%2F31%2Fweb%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-Html%E7%AF%87%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javaweb入门笔记(1)-JSP技术]]></title>
+    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-1-JSP%E6%8A%80%E6%9C%AF%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javaweb入门笔记(1)-cookie和session]]></title>
+    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-1-cookie%E5%92%8Csession%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javaweb入门笔记(1)-request和response]]></title>
+    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-1-request%E5%92%8Cresponse%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javaweb入门笔记(1)-Servlet]]></title>
+    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-1-Servlet%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javaweb入门笔记(2)-Http入门]]></title>
+    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-2-Http%E5%85%A5%E9%97%A8%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javaweb入门笔记(1)-Tomcat]]></title>
+    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-1-Tomcat%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[使用hexo搭建博客出现hexo -d报错如何解决]]></title>
+    <url>%2F2018%2F03%2F31%2F%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0hexo-d%E6%8A%A5%E9%94%99%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%2F</url>
+    <content type="text"><![CDATA[如果在使用hexo d命令的前提下，直接修改.git下面的config文件是无法成功的。原因是：使用该命令之后，会根据_config.yml下面的deploy节点进行cofig文件的覆盖。也就是说，_config.yml如果不做修改，无论如何修改.git下面的配置文件都是无效的，都会被覆盖。能够在本地打开，但是部署不到github上去 hexo d的时候报错123456789101112131415161718192021222324252627$ hexo dINFO Deploying: gitINFO Clearing .deploy folder...INFO Copying files from public folder...warning: LF will be replaced by CRLF in 2015/12/05/hello-world/index.html.The file will have its original line endings in your working directory.……warning: LF will be replaced by CRLF in index.html.The file will have its original line endings in your working directory.warning: LF will be replaced by CRLF in js/script.js.The file will have its original line endings in your working directory.On branch masternothing to commit, working directory cleanbash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for 'GitHub · Where software is built': No errorFATAL Something's wrong. Maybe you can find the solution here: TroubleshootingError: bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for 'GitHub · Where software is built': No errorat ChildProcess.&lt;anonymous&gt; (E:\SwuComputer\HTML5\hexo\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:42:17)at emitTwo (events.js:87:13)at ChildProcess.emit (events.js:172:7)at maybeClose (internal/child_process.js:818:16)at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5) 详细答案：有关使用 Hexo 和 GitHub 搭建博客，出现 hexo -d 报错如何解决？ - https://www.zhihu.com/question/38219432 我试了了高票答案，但是发现不行，最后用下面这个解决了。 解决方法修改配置文件：根目录下的_config.yml，修改deploy节点。 原来的配置为：1234deploy: type: git repo: https://github.com/&#123;yourname&#125;/&#123;yourname&#125;.github.io.git branch: master 修改为如下： deploy: type: git repo: https://{yourname}:{yourpassword}@github.com/{yourname}/{yourname}.github.io.git branch: master 亲测可行!!!]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>解决部署问题</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>搭建博客时部署报错</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Servlet中doGet与doPost的区别]]></title>
+    <url>%2F2018%2F03%2F31%2FServlet%E4%B8%ADdoGet%E4%B8%8EdoPost%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[学习方法论]]></title>
     <url>%2F2018%2F03%2F22%2F%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA%2F</url>
     <content type="text"><![CDATA[每个人都有自己做事的方法论，在网上看到一篇短小的关于编程的交流总结，关于如何在做事时提高效率·做好预研，收集相关前人成果，避免无满的重复劳动·在可行性判新阶段，能找到工具就不写代码，能用脚本语言写就不要用编译语言，把完美主义放在最终实现阶段·做好笔记并定期整理，速忘会让所有的投入都白白浪费·多交流，别人说一个工具的名字可能让你节约敷小时·咖啡可以提高思维效率，而且合法·无论怎么提高效率，要成为专家，都需要大量的时间投入]]></content>
