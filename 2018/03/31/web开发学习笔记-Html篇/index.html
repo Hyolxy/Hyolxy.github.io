@@ -88,7 +88,7 @@
 <meta property="og:description" content="本文主要对 HTML 进行介绍和归纳。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/web开发学习笔记-HTMML篇.jpg">
-<meta property="og:updated_time" content="2018-04-07T08:24:31.999Z">
+<meta property="og:updated_time" content="2018-04-07T08:28:05.271Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发学习笔记-Html篇">
 <meta name="twitter:description" content="本文主要对 HTML 进行介绍和归纳。">
@@ -422,14 +422,8 @@
       
         <img src="/images/web开发学习笔记-HTMML篇.jpg" width="900" height="445">
 <p>本文主要对 HTML 进行介绍和归纳。<a id="more"></a><br>首先，我们要知道HTML是一种超文本标记语言，不需要编译，直接由浏览器执行。HTML由W3C维护，是通向WEB技术世界的钥匙。</p>
-<h1 id="一、HTML文件主体结构标签"><a href="#一、HTML文件主体结构标签" class="headerlink" title="一、HTML文件主体结构标签"></a>一、HTML文件主体结构标签</h1><p>1、文档声明 &lt;!doctype html&gt;</p>
-<p>2、html标签<html></html></p>
-<p>3、head标签<head></head>里面会包含诸如页面标题，搜索引擎信息等相关的标签</p>
-<p>4、body标签<body></body>页面的主体内容包含在里面。属性有background、bgcolor、text、link、vlink、alink</p>
-<h1 id="二、head头部标签"><a href="#二、head头部标签" class="headerlink" title="二、head头部标签"></a>二、head头部标签</h1><p>1、<code>&lt;title&gt;&lt;/title&gt;</code>定义标题</p>
-<p>2、<code>&lt;meta/&gt;</code>向服务器和客户端传达关于文档的隐藏信息。</p>
-<p>3、<code>&lt;link href=&quot;&quot;&gt;&lt;/link&gt;</code>允许当前文档和外部文档建立连接</p>
-<p>相关的代码：</p>
+<h1 id="一、HTML文件主体结构标签"><a href="#一、HTML文件主体结构标签" class="headerlink" title="一、HTML文件主体结构标签"></a>一、HTML文件主体结构标签</h1><p>1、文档声明 &lt;!doctype html&gt;<br>2、html标签<html></html><br>3、head标签<head></head>里面会包含诸如页面标题，搜索引擎信息等相关的标签<br>4、body标签<body></body>页面的主体内容包含在里面。属性有background、bgcolor、text、link、vlink、alink</p>
+<h1 id="二、head头部标签"><a href="#二、head头部标签" class="headerlink" title="二、head头部标签"></a>二、head头部标签</h1><p>1、<code>&lt;title&gt;&lt;/title&gt;</code>定义标题<br>2、<code>&lt;meta/&gt;</code>向服务器和客户端传达关于文档的隐藏信息。<br>3、<code>&lt;link href=&quot;&quot;&gt;&lt;/link&gt;</code>允许当前文档和外部文档建立连接<br>相关的代码：</p>
 <ul>
 <li>定义字符集编码<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></li>
 <li>刷新或者跳转<code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;3;url=http://www.baidu.com&quot; &gt;</code>过3秒跳到百度</li>
@@ -458,10 +452,8 @@
 <li><code>* &amp;reg</code>;   <code>®</code></li>
 </ul>
 <h1 id="四、列表标签"><a href="#四、列表标签" class="headerlink" title="四、列表标签"></a>四、列表标签</h1><ul>
-<li><p><code>&lt;ol&gt;</code>    定义有序列表</p>
-</li>
-<li><p><code>&lt;ul&gt;</code>   定义无序列表<br>excemple:</p>
-<pre><code>&lt;h4&gt;无序列表:&lt;/h4&gt;
+<li><code>&lt;ol&gt;</code>    定义有序列表</li>
+<li><code>&lt;ul&gt;</code>   定义无序列表<br>excemple:<pre><code>&lt;h4&gt;无序列表:&lt;/h4&gt;
 &lt;ul&gt; 
 &lt;li&gt;Coffee&lt;/li&gt;
 &lt;li&gt;Tea&lt;/li&gt; 
@@ -518,11 +510,15 @@
 <li><p>button<br>type属性 <code>submit（默认）</code>、<code>reset</code>、<code>button</code></p>
 </li>
 <li>select属性 <code>name</code>、<code>size</code></li>
-<li>option属性 <code>value</code>、<code>diabled</code>、<code>selected（默认选项）</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;xueli&quot;&gt;</span><br><span class="line">&lt;option value=&quot;boshi&quot;&gt;博士&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;shuoshi&quot;&gt;硕士&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;ben&quot;&gt;本科&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;zhuan&quot;&gt;专科&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+<li><p>option属性 <code>value</code>、<code>diabled</code>、<code>selected（默认选项）</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;xueli&quot;&gt;</span><br><span class="line">&lt;option value=&quot;boshi&quot;&gt;博士&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;shuoshi&quot;&gt;硕士&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;ben&quot;&gt;本科&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;zhuan&quot;&gt;专科&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>textarea属性 <code>rows</code>(高度)、<code>cols</code>(宽度)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;自我介绍&lt;/td&gt;</span><br><span class="line">&lt;td&gt;</span><br><span class="line">&lt;textarea name=&quot;text&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>label</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;&lt;label for=&quot;pwd&quot; &gt;密码&lt;/label&gt;&lt;/td&gt;</span><br><span class="line">&lt;!-- 点击密码光标移动到后面的文本框 --&gt;</span><br><span class="line">&lt;td&gt;&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p>6、textarea属性 <code>rows</code>(高度)、<code>cols</code>(宽度)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;自我介绍&lt;/td&gt;</span><br><span class="line">&lt;td&gt;</span><br><span class="line">&lt;textarea name=&quot;text&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br></pre></td></tr></table></figure></p>
-<p>7、label<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td&gt;&lt;label for=&quot;pwd&quot; &gt;密码&lt;/label&gt;&lt;/td&gt;</span><br><span class="line">&lt;!-- 点击密码光标移动到后面的文本框 --&gt;</span><br><span class="line">&lt;td&gt;&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
