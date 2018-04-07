@@ -88,7 +88,7 @@
 <meta property="og:description" content="Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/Markdown使用笔记.jpg">
-<meta property="og:updated_time" content="2018-04-07T12:18:13.328Z">
+<meta property="og:updated_time" content="2018-04-07T12:22:24.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown使用笔记">
 <meta name="twitter:description" content="Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些">
@@ -475,14 +475,18 @@
 <h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><p>两种方法：</p>
 <ol>
 <li>在 Markdown 中建立代码区块很简单，只要简单地<code>缩进 4 个空格</code>或是 <code>1 个制表符</code>就可以<br>当前面有<code>-</code>的列表语句时，此时<strong>换成两个制表符</strong>就可以了</li>
-<li>前后加(三个点点点)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 填充(padding)</span><br><span class="line">元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。</span><br><span class="line">		div&#123;padding:20px 10px 15px 30px;&#125;/*上、右、下、左(顺时针)，顺序不要搞混*/</span><br><span class="line">		div&#123;</span><br><span class="line">        padding-top:20px;</span><br><span class="line">		padding-right:10px;</span><br><span class="line">		padding-bottom:15px;</span><br><span class="line">		padding-left:30px;</span><br><span class="line">		&#125;</span><br><span class="line">		div&#123;padding:10px;&#125;/*上、右、下、左的填充都为10px;*/</span><br><span class="line">		div&#123;padding:10px 20px;&#125;/*上下填充一样为10px，左右一样为20px*/</span><br></pre></td></tr></table></figure>
+<li>前后加(三个点点点)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 填充(padding)</span><br><span class="line">元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。</span><br><span class="line">		div&#123;padding:20px 10px 15px 30px;&#125;/*上、右、下、左(顺时针)，顺序不要搞混*/</span><br><span class="line">		div&#123;</span><br><span class="line">             padding-top:20px;</span><br><span class="line">		     padding-right:10px;</span><br><span class="line">		     padding-bottom:15px;</span><br><span class="line">		     padding-left:30px;</span><br><span class="line">		&#125;</span><br><span class="line">		div&#123;padding:10px;&#125;/*上、右、下、左的填充都为10px;*/</span><br><span class="line">		div&#123;padding:10px 20px;&#125;/*上下填充一样为10px，左右一样为20px*/</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>效果如下：</p>
 <ul>
 <li>填充(padding)<br>元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。<pre><code>div{padding:20px 10px 15px 30px;}/*上、右、下、左(顺时针)，顺序不要搞混*/
 div{
-</code></pre>  padding-top:20px;<br>  padding-right:10px;<br>  padding-bottom:15px;<br>  padding-left:30px;<pre><code>}
+     padding-top:20px;
+     padding-right:10px;
+     padding-bottom:15px;
+     padding-left:30px;
+}
 div{padding:10px;}/*上、右、下、左的填充都为10px;*/
 div{padding:10px 20px;}/*上下填充一样为10px，左右一样为20px*/  
 </code></pre></li>
