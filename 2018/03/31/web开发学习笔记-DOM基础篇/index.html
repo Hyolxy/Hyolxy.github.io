@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/web开发学习笔记-DOM基础篇.jpg">
 <meta property="og:image" content="http://yoursite.com/images/web开发学习笔记-DOM基础篇.gif">
-<meta property="og:updated_time" content="2018-04-07T07:40:17.914Z">
+<meta property="og:updated_time" content="2018-04-07T07:44:55.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发学习笔记-DOM基础篇">
 <meta name="twitter:description" content="本文主要介绍 HTML DOM。第一部分 “DOM 概述” 主要参考 MDN，第二部分 “HTML DOM” 主要参考 W3School。">
@@ -441,23 +441,26 @@
 <ul>
 <li>innerHTML 属性用于获取或替换 HTML 元素的内容，<code>Object.innerHTML</code></li>
 <li>改变 HTML 样式，<code>Object.style.property=new style</code>;</li>
-<li>隐藏和显示 <code>Object.style.display = value</code>，value 可取 <code>none</code> 或者 <code>block</code><br>HTML DOM 定义了所有 HTML 元素的对象和属性，以及访问它们的方法。换言之，HTML DOM 是关于如何获取、修改、添加或删除 HTML 元素的标准。<br><a href="http://www.w3school.com.cn/htmldom/index.asp" target="_blank" rel="noopener">参考 W3School - HTML DOM 教程</a><h2 id="方法和属性"><a href="#方法和属性" class="headerlink" title="方法和属性"></a>方法和属性</h2>所有 HTML 元素被定义为对象，而编程接口则是 <strong>对象方法</strong> 和 <strong>对象属性</strong>。</li>
+<li>隐藏和显示 <code>Object.style.display = value</code>，value 可取 <code>none</code> 或者 <code>block</code><br>HTML DOM 定义了所有 HTML 元素的对象和属性，以及访问它们的方法。换言之，HTML DOM 是关于如何获取、修改、添加或删除 HTML 元素的标准。<br><a href="http://www.w3school.com.cn/htmldom/index.asp" target="_blank" rel="noopener">参考 W3School - HTML DOM 教程</a></li>
+</ul>
+<h2 id="方法和属性"><a href="#方法和属性" class="headerlink" title="方法和属性"></a>方法和属性</h2><p>所有 HTML 元素被定义为对象，而编程接口则是 <strong>对象方法</strong> 和 <strong>对象属性</strong>。</p>
+<ul>
 <li>方法是您能够执行的动作（比如添加或修改元素）。</li>
 <li>属性是您能够获取或设置的值（比如节点的名称或内容）</li>
 </ul>
 <p>一些常用的 HTML DOM 方法：</p>
 <ul>
-<li>getElementById(id) - 获取带有指定 id 的节点（元素）</li>
-<li>appendChild(node) - 插入新的子节点（元素）</li>
-<li>removeChild(node) - 删除子节点（元素）</li>
+<li><code>getElementById(id)</code> - 获取带有指定 id 的节点（元素）</li>
+<li><code>appendChild(node)</code> - 插入新的子节点（元素）</li>
+<li><code>removeChild(node)</code> - 删除子节点（元素）</li>
 </ul>
 <p>一些常用的 HTML DOM 属性：</p>
 <ul>
-<li>innerHTML - 节点（元素）的文本值</li>
-<li>parentNode - 节点（元素）的父节点</li>
-<li>childNodes - 节点（元素）的子节点</li>
-<li>attributes - 节点（元素）的属性节点</li>
-<li>nodeName - nodeName 属性规定节点的名称。<ul>
+<li><code>innerHTML</code> - 节点（元素）的文本值</li>
+<li><code>parentNode</code> - 节点（元素）的父节点</li>
+<li><code>childNodes</code> - 节点（元素）的子节点</li>
+<li><code>attributes</code> - 节点（元素）的属性节点</li>
+<li><code>nodeName</code> - nodeName属性规定节点的名称。<ul>
 <li>nodeName 是只读的</li>
 <li>元素节点的 nodeName 与标签名相同</li>
 <li>属性节点的 nodeName 与属性名相同</li>
@@ -466,23 +469,23 @@
 </ul>
 </li>
 <li>nodeValue - 性规定节点的值。<ul>
-<li>元素节点的 nodeValue 是 undefined 或 null</li>
+<li>元素节点的 nodeValue 是 <code>undefined</code> 或 <code>null</code></li>
 <li>文本节点的 nodeValue 是文本本身</li>
 <li>属性节点的 nodeValue 是属性值</li>
 </ul>
 </li>
-<li>nodeType - 返回节点的类型。nodeType 是只读的。</li>
+<li>nodeType - 返回节点的类型。<code>nodeType</code> 是只读的。</li>
 </ul>
 <p>DOM 根节点有两个特殊的属性，可以访问全部文档：</p>
 <ul>
-<li>document.documentElement - 全部文档</li>
-<li>document.body - 文档的主体</li>
+<li><code>document.documentElement</code> - 全部文档</li>
+<li><code>document.body</code> - 文档的主体</li>
 </ul>
 <h2 id="访问和修改"><a href="#访问和修改" class="headerlink" title="访问和修改"></a>访问和修改</h2><p>访问 HTML 元素等同于访问节点,能够以不同的方式来访问 HTML 元素：</p>
 <ul>
-<li>getElementById() 方法</li>
-<li>getElementsByTagName() 方法</li>
-<li>getElementsByClassName() 方法</li>
+<li><code>getElementById()</code> 方法</li>
+<li><code>getElementsByTagName()</code> 方法</li>
+<li><code>getElementsByClassName()</code> 方法</li>
 </ul>
 <p>修改 HTML DOM 意味着许多不同的方面：</p>
 <ul>
@@ -495,11 +498,11 @@
 </ul>
 <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>HTML 事件的例子：</p>
 <ul>
-<li>当用户点击鼠标时，onmousedown、onmouseup 以及 onclick 事件</li>
-<li>当网页已加载时，onload 和 onunload 事件</li>
+<li>当用户点击鼠标时，<code>onmousedown、onmouseup 以及 onclick</code>事件</li>
+<li>当网页已加载时，<code>onload 和 onunload</code> 事件</li>
 <li>当图片已加载时</li>
-<li>当鼠标移动到元素上时，onmouseover 和 onmouseout 事件</li>
-<li>当输入字段被改变时，onchange 事件</li>
+<li>当鼠标移动到元素上时，<code>onmouseover</code> 和 <code>onmouseout</code> 事件</li>
+<li>当输入字段被改变时，<code>onchange</code> 事件</li>
 <li>当 HTML 表单被提交时</li>
 <li>当用户触发按键时</li>
 </ul>
