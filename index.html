@@ -1247,9 +1247,13 @@
 <p>选择符：又称选择器，指明网页中要应用样式规则的元素。<br>声明：在英文大括号<strong>{}</strong>中的的就是声明，属性和值之间用英文冒号<strong>{}</strong>分隔。当有多条声明时，中间可以英文分号<strong>;</strong>分隔。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;</span><br><span class="line">    样式;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>从CSS 样式代码插入的形式来看基本可以分为以下3种：<strong>内联式、嵌入式和外部式三种</strong>。<br>优先级遵循就近原则，一般来说，<strong>内联式 &gt; 嵌入式 &gt; 外部式</strong>。</p>
 <ul>
-<li><p>内联式</p>
+<li>内联式<ul>
+<li>例子 <p style="color:red;font-size:12px">这里文字是红色。</p></li>
+</ul>
+</li>
+<li><p>嵌入式</p>
 <ul>
-<li>例子 <p style="color:red;font-size:12px">这里文字是红色。</p><br>-嵌入式<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    span&#123;</span><br><span class="line">        color:red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<li>示例<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    span&#123;</span><br><span class="line">        color:red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -1260,28 +1264,28 @@
 </ul>
 <h1 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h1><p>常见的类选择器类型有如下几种：</p>
 </li>
-<li><p>标签选择器，</p>
+<li><p>标签选择器</p>
 <ul>
 <li>.标签选择器名称{css样式代码;}</li>
 </ul>
 </li>
-<li>类选择器，<ul>
+<li>类选择器<ul>
 <li>.类选器名称{css样式代码;}</li>
 </ul>
 </li>
-<li>ID 选择器，<ul>
+<li>ID 选择器<ul>
 <li>＃类选器名称{css样式代码;}</li>
 </ul>
 </li>
-<li>子选择器，<ul>
+<li>子选择器<ul>
 <li>即大于符号(&gt;),用于选择指定标签元素的第一代子元素</li>
 </ul>
 </li>
-<li>包含选择器，<ul>
+<li>包含选择器<ul>
 <li>即加入空格 ,用于选择指定标签元素下的后辈元素</li>
 </ul>
 </li>
-<li>通用选择器，<ul>
+<li>通用选择器<ul>
 <li>匹配html中所有标签元素，* {css样式代码;}<br>类选择器和ID选择器都可以应用于任何元素，但 <strong>ID 选择器只能在文档中使用一次</strong>，可以使用类选择器词列表方法为一个元素同时设置多个样式，ID 选择器是不可以的。</li>
 </ul>
 </li>
