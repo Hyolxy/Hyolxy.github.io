@@ -88,7 +88,7 @@
 <meta property="og:description" content="本文主要对 HTML 进行介绍和归纳。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/web开发学习笔记-HTMML篇.jpg">
-<meta property="og:updated_time" content="2018-04-07T08:05:23.029Z">
+<meta property="og:updated_time" content="2018-04-07T08:15:53.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发学习笔记-Html篇">
 <meta name="twitter:description" content="本文主要对 HTML 进行介绍和归纳。">
@@ -426,9 +426,9 @@
 <p>2、html标签<html></html></p>
 <p>3、head标签<head></head>里面会包含诸如页面标题，搜索引擎信息等相关的标签</p>
 <p>4、body标签<body></body>页面的主体内容包含在里面。属性有background、bgcolor、text、link、vlink、alink</p>
-<h1 id="二、head头部标签"><a href="#二、head头部标签" class="headerlink" title="二、head头部标签"></a>二、head头部标签</h1><p>1、<title></title>定义标题</p>
-<p>2、<meta></p>
-<p>3、<link href=""></p>
+<h1 id="二、head头部标签"><a href="#二、head头部标签" class="headerlink" title="二、head头部标签"></a>二、head头部标签</h1><p>1、<code>&lt;title&gt;&lt;/title&gt;</code>定义标题</p>
+<p>2、<code>&lt;meta/&gt;</code></p>
+<p>3、<code>&lt;link href=&quot;&quot;&gt;&lt;/link&gt;</code></p>
 <p>相关的代码：</p>
 <ul>
 <li>定义字符集编码<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></li>
@@ -447,55 +447,53 @@
 </ul>
 <p>HTML实体：</p>
 <ul>
-<li><ul>
-<li>&nbsp; 空格</li>
-</ul>
-</li>
-<li><ul>
-<li>&lt;        &lt;</li>
-</ul>
-</li>
-<li><ul>
-<li>&gt;   &gt;</li>
-</ul>
-</li>
-<li><ul>
-<li>&quot;   “ 引号</li>
-</ul>
-</li>
-<li><ul>
-<li>&copy;   © 版权</li>
-</ul>
-</li>
-<li><ul>
-<li>&yen;   ¥</li>
-</ul>
-</li>
-<li><ul>
-<li>&times;  ×</li>
-</ul>
-</li>
-<li><ul>
-<li>&divide;  ÷</li>
-</ul>
-</li>
-<li><ul>
-<li>&reg;    ®</li>
-</ul>
-</li>
+<li><code>* &amp;nbsp</code>; 空格</li>
+<li><code>* &amp;lt</code>;        <code>&lt;</code></li>
+<li><code>* &amp;gt</code>;   <code>&gt;</code></li>
+<li><code>* &amp;quot</code>;   “ 引号</li>
+<li><code>* &amp;copy</code>;   <code>©</code> 版权</li>
+<li><code>* &amp;yen</code>;   <code>¥</code></li>
+<li><code>* &amp;times</code>; <code>×</code></li>
+<li><code>* &amp;divide</code>; <code>÷</code></li>
+<li><code>* &amp;reg</code>;   <code>®</code></li>
 </ul>
 <h1 id="四、列表标签"><a href="#四、列表标签" class="headerlink" title="四、列表标签"></a>四、列表标签</h1><ul>
-<li>ul 无序列表</li>
-<li>li</li>
-<li>ol 有序列表</li>
-<li>dl 定义列表</li>
-<li>dt 列表项的标题</li>
-<li>dd 列表项目的描述</li>
+<li><p><code>&lt;ol&gt;</code>    定义有序列表</p>
+</li>
+<li><p><code>&lt;ul&gt;</code>   定义无序列表<br>excemple:</p>
+<pre><code>&lt;h4&gt;无序列表:&lt;/h4&gt;
+
+&lt;ul&gt; 
+</code></pre></li>
+</ul>
+<li>Coffee</li>
+
+ <li>Tea</li> 
+
+<li>Milk</li>
+
+<pre><code>&lt;/ul&gt;
+</code></pre><ul>
+<li><p><code>&lt;li&gt;</code>    定义列表项<br>excemple:</p>
+<pre><code>&lt;h4&gt;大写字母列表：&lt;/h4&gt; 
+</code></pre></li>
+</ul>
+<ol type="A"><br><br><li>Apples</li><br><br><li>Bananas</li><br><br><li>Lemons</li><br><br><li>Oranges</li><br><br>        </ol>
+
+
+
+<ul>
+<li><p><code>&lt;dl&gt;</code>    定义定义列表</p>
+</li>
+<li><p><code>&lt;dt&gt;</code>    自定义列表项目</p>
+</li>
+<li><p><code>&lt;dd&gt;</code>    定义自定列表项的描述–&gt;</p>
+</li>
 </ul>
 <h1 id="五、文本标签"><a href="#五、文本标签" class="headerlink" title="五、文本标签"></a>五、文本标签</h1><ul>
-<li>em 强调 表现为斜体</li>
-<li>strong 强调 表现为加粗</li>
-<li>blockquote引用</li>
+<li><code>em</code>强调 表现为斜体</li>
+<li><code>strong</code> 强调 表现为加粗</li>
+<li><code>blockquote</code>引用</li>
 </ul>
 <h1 id="六、链接和锚点"><a href="#六、链接和锚点" class="headerlink" title="六、链接和锚点"></a>六、链接和锚点</h1><ol>
 <li><p>URL同一资源定位符,万维网的每一个文件都有一个URL</p>
