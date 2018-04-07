@@ -9,8 +9,8 @@
         <category>MarkDown</category>
       </categories>
       <tags>
-        <tag>web基础</tag>
         <tag>MarkDown的常用语法</tag>
+        <tag>web基础</tag>
       </tags>
   </entry>
   <entry>
@@ -79,8 +79,8 @@
         <category>CSS</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
         <tag>web基础</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -119,11 +119,6 @@
   <entry>
     <title><![CDATA[Javaweb入门笔记-2-Http入门]]></title>
     <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-2-Http%E5%85%A5%E9%97%A8%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Javaweb入门笔记-1-Tomcat]]></title>
-    <url>%2F2018%2F03%2F31%2FJavaweb%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0-1-Tomcat%2F</url>
     <content type="text"></content>
   </entry>
   <entry>
