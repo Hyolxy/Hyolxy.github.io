@@ -88,7 +88,7 @@
 <meta property="og:description" content="这一篇介绍servlet入门">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/Javaweb入门笔记-3-Servlet.jpg">
-<meta property="og:updated_time" content="2018-04-07T14:02:07.957Z">
+<meta property="og:updated_time" content="2018-04-07T14:04:50.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb入门笔记-3-Servlet">
 <meta name="twitter:description" content="这一篇介绍servlet入门">
@@ -429,8 +429,9 @@
 <ol>
 <li>构造 servlet，然后使用 init 方法将其初始化。 </li>
 <li>处理来自客户端的对 service 方法的所有调用。 </li>
-<li>从服务中取出 servlet，然后使用 destroy 方法销毁它，最后进行垃圾回收并终止它。<br>Servlet：<br>1、接受浏览器发送过来的消息。<br>2、给浏览器返回消息。浏览器认识html。可以动态去输出html</li>
+<li>从服务中取出 servlet，然后使用 destroy 方法销毁它，最后进行垃圾回收并终止它。</li>
 </ol>
+<p>Servlet功能：<br>1、接受浏览器发送过来的消息。<br>2、给浏览器返回消息。浏览器认识html。可以动态去输出html</p>
 <h1 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h1><p>生命周期相关方法(life-cycle methods)<br>Servlet的生命周期通过java.servlet.Servlet接口中的<code>init()</code>、<code>service()</code>、和<code>destroy()</code>方法表示。<br>Servlet的生命周期有四个阶段：<code>加载并实例化</code>、<code>初始化</code>、<code>请求处理</code>、<code>销毁</code>。</p>
 <p>1.调用 init 方法 初始化Servlet<br>2.调用 Servlet中的service方法 处理请求操作<br>3.调用 destory方法 执行Servlet销毁的操作<br>init方法：当服务器创建一个serlvet的时候，会去调用init方法。当我们第一次去访问一个servlet的时候，会去创建这个servlet对象。并且只会创建一次。如果配置了load-on-startup 表示服务器启动的时候就创建servlet实例。<br>service方法：客户端每一次请求，tomcat都会去调用servcie方法。处理用户的请求。并且给其响应。每一次请求都会调用servcie方法。<br>estroy 方法：当服务器销毁一个servlet的时候，会调用里面的destory方法。当我们的web服务器，正常关闭的时候，会去调用destroy方法。否则不会调用destroy的方法。</p>
 <h1 id="servlet实现"><a href="#servlet实现" class="headerlink" title="servlet实现"></a>servlet实现</h1><p>开发步骤：</p>
