@@ -88,7 +88,7 @@
 <meta property="og:description" content="本文主要对 HTML 进行介绍和归纳。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/web开发学习笔记-HTMML篇.jpg">
-<meta property="og:updated_time" content="2018-04-07T08:17:49.989Z">
+<meta property="og:updated_time" content="2018-04-07T08:24:31.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发学习笔记-Html篇">
 <meta name="twitter:description" content="本文主要对 HTML 进行介绍和归纳。">
@@ -462,33 +462,23 @@
 </li>
 <li><p><code>&lt;ul&gt;</code>   定义无序列表<br>excemple:</p>
 <pre><code>&lt;h4&gt;无序列表:&lt;/h4&gt;
-
 &lt;ul&gt; 
+&lt;li&gt;Coffee&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt; 
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
 </code></pre></li>
-</ul>
-<li>Coffee</li>
-
- <li>Tea</li> 
-
-<li>Milk</li>
-
-<pre><code>&lt;/ul&gt;
-</code></pre><ul>
-<li><p><code>&lt;li&gt;</code>    定义列表项<br>excemple:</p>
-<pre><code>&lt;h4&gt;大写字母列表：&lt;/h4&gt; 
+<li><code>&lt;li&gt;</code>    定义列表项<br>excemple:<pre><code>&lt;h4&gt;大写字母列表：&lt;/h4&gt; 
+&lt;ol type=&quot;A&quot;&gt; 
+&lt;li&gt;Apples&lt;/li&gt; 
+&lt;li&gt;Bananas&lt;/li&gt; 
+&lt;li&gt;Lemons&lt;/li&gt; 
+&lt;li&gt;Oranges&lt;/li&gt; 
+&lt;/ol&gt;
 </code></pre></li>
-</ul>
-<ol type="A"><br><br><li>Apples</li><br><br><li>Bananas</li><br><br><li>Lemons</li><br><br><li>Oranges</li><br><br>        </ol>
-
-
-
-<ul>
-<li><p><code>&lt;dl&gt;</code>    定义定义列表</p>
-</li>
-<li><p><code>&lt;dt&gt;</code>    自定义列表项目</p>
-</li>
-<li><p><code>&lt;dd&gt;</code>    定义自定列表项的描述–&gt;</p>
-</li>
+<li><code>&lt;dl&gt;</code>    定义定义列表</li>
+<li><code>&lt;dt&gt;</code>    自定义列表项目</li>
+<li><code>&lt;dd&gt;</code>    定义自定列表项的描述–&gt;</li>
 </ul>
 <h1 id="五、文本标签"><a href="#五、文本标签" class="headerlink" title="五、文本标签"></a>五、文本标签</h1><ul>
 <li><code>em</code>强调 表现为斜体</li>
@@ -496,50 +486,37 @@
 <li><code>blockquote</code>引用</li>
 </ul>
 <h1 id="六、链接和锚点"><a href="#六、链接和锚点" class="headerlink" title="六、链接和锚点"></a>六、链接和锚点</h1><ol>
-<li><p>URL同一资源定位符,万维网的每一个文件都有一个URL</p>
-</li>
-<li><p>a标签属性：  <code>href</code>的值是<code>URL</code>、<code>target</code>新网页从哪个窗口打开<code>（_self/_blank）</code>、<code>title</code> 提示、<code>download</code>下载（H5新增）</p>
-</li>
-<li><p>锚点<code>&lt;a name=&quot;锚点的名字&quot;&gt;&lt;/a&gt;</code>、使用超链接#跳到指定位置</p>
-</li>
+<li>URL同一资源定位符,万维网的每一个文件都有一个URL</li>
+<li>a标签属性：  <code>href</code>的值是<code>URL</code>、<code>target</code>新网页从哪个窗口打开<code>（_self/_blank）</code>、<code>title</code> 提示、<code>download</code>下载（H5新增）</li>
+<li>锚点<code>&lt;a name=&quot;锚点的名字&quot;&gt;&lt;/a&gt;</code>、使用超链接#跳到指定位置</li>
 </ol>
 <h1 id="七、图像"><a href="#七、图像" class="headerlink" title="七、图像"></a>七、图像</h1><ol>
-<li>img标签的属性：<br>src<br>alt图片无法显示时显示文字<br>title<br>width/height<br>usemap</li>
-<li>usemap用于图片的映射。一个图像被分成几个区域，当用户点击某一个区域时，将被链接到不同的文档中。</li>
+<li><p>img标签的属性：<br>src<br>alt图片无法显示时显示文字<br>title<br>width/height</p>
+</li>
+<li><p>usemap<br>usemap用于图片的映射。一个图像被分成几个区域，当用户点击某一个区域时，将被链接到不同的文档中。</p>
+</li>
 </ol>
 <ul>
-<li><p><code>&lt;a name=&quot;page1&quot;&gt;&lt;a/&gt;</code></p>
-</li>
-<li><p><code>&lt;img src=&quot;&quot; usemap=&quot;mymap&quot;&gt;</code></p>
-</li>
-<li><p><code>&lt;map name=&quot;mymap&quot; id=&quot;mymap&quot;&gt;</code></p>
-</li>
-<li><p><code>&lt;area shape=&quot;rect&quot; coords=&quot;0,10,20,20&quot; href=&quot;#page1&quot;&gt;</code></p>
-</li>
+<li><code>&lt;a name=&quot;page1&quot;&gt;&lt;a/&gt;</code></li>
+<li><code>&lt;img src=&quot;&quot; usemap=&quot;mymap&quot;&gt;</code></li>
+<li><code>&lt;map name=&quot;mymap&quot; id=&quot;mymap&quot;&gt;</code></li>
+<li><code>&lt;area shape=&quot;rect&quot; coords=&quot;0,10,20,20&quot; href=&quot;#page1&quot;&gt;</code></li>
 </ul>
 <h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><ol>
-<li><p>table标签 属性：<code>border、width/height、cellspacing</code>(单元格之间的间隙，默认2)、<code>cellpadding</code>(单元格与单元格内容之间的间隙，默认0)、<code>align、bgcolor、background</code></p>
-</li>
-<li><p>tr标签 属性：</p>
-</li>
-</ol>
-<p><code>align</code>(行内文字的水平对齐方式<code>left/center/right</code>)<br><code>valign</code>(行内文字的垂直对齐方式<code>top/middle/bottom</code>)<br><code>height</code>行高度<br><code>bgcolor</code>背景颜色</p>
-<ol>
-<li><p>td标签属性：align、valign、width、height</p>
-</li>
-<li><p>th标签 表头</p>
-</li>
+<li>table标签 属性：<code>border、width/height、cellspacing</code>(单元格之间的间隙，默认2)、<code>cellpadding</code>(单元格与单元格内容之间的间隙，默认0)、<code>align、bgcolor、background</code></li>
+<li>tr标签 属性：<br><code>align</code>(行内文字的水平对齐方式<code>left/center/right</code>)<br><code>valign</code>(行内文字的垂直对齐方式<code>top/middle/bottom</code>)<br><code>height</code>行高度<br><code>bgcolor</code>背景颜色</li>
+<li>td标签属性：align、valign、width、height</li>
+<li>th标签 表头</li>
 </ol>
 <h1 id="九、表单"><a href="#九、表单" class="headerlink" title="九、表单"></a>九、表单</h1><ol>
 <li><p>form属性有<code>action、method、target、enctype</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;http://www.baidu.com/s&quot; method=&quot;get&quot;&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>input</p>
+<li><p>input<br>name<br>type(<code>text</code>默认文本框、<code>password</code>密码框、<code>radio</code>单选框、<code>checkbox</code>复选框、<code>file</code>文件上传、<code>submit</code>提交按钮、<code>reset</code>重置按钮、<code>button</code>普通按钮)<br>value <code>type</code>值不同<code>value</code>的意义不同<br>size 控制输入框宽度 适用于<code>text/password</code><br>maxlength 最大输入字符个数 适用于<code>text/password</code><br>checked 默认选中 适用于<code>radio/checkbox</code><br>readonly 只读<br>disabled 表示不可用<br>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;wd&quot; placeholder=&quot;请输入您的用户&quot; size=&quot;50&quot; maxlength=&quot;5&quot; disabled&gt;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p>name<br>type(<code>text</code>默认文本框、<code>password</code>密码框、<code>radio</code>单选框、<code>checkbox</code>复选框、<code>file</code>文件上传、<code>submit</code>提交按钮、<code>reset</code>重置按钮、<code>button</code>普通按钮)<br>value <code>type</code>值不同<code>value</code>的意义不同<br>size 控制输入框宽度 适用于<code>text/password</code><br>maxlength 最大输入字符个数 适用于<code>text/password</code><br>checked 默认选中 适用于<code>radio/checkbox</code><br>readonly 只读<br>disabled 表示不可用<br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; name=&quot;wd&quot; placeholder=&quot;请输入您的用户&quot; size=&quot;50&quot; maxlength=&quot;5&quot; disabled&gt;</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>button<br>type属性 <code>submit（默认）</code>、<code>reset</code>、<code>button</code></li>
+<li><p>button<br>type属性 <code>submit（默认）</code>、<code>reset</code>、<code>button</code></p>
+</li>
 <li>select属性 <code>name</code>、<code>size</code></li>
 <li>option属性 <code>value</code>、<code>diabled</code>、<code>selected（默认选项）</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;xueli&quot;&gt;</span><br><span class="line">&lt;option value=&quot;boshi&quot;&gt;博士&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;shuoshi&quot;&gt;硕士&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;ben&quot;&gt;本科&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;zhuan&quot;&gt;专科&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
 </li>
