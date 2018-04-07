@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Stay hungry ,stay foolish!">
+<meta name="description" content="基础知识CSS 样式由选择符和声明组成，而声明又由属性和值组成。 选择符：又称选择器，指明网页中要应用样式规则的元素。声明：在英文大括号{}中的的就是声明，属性和值之间用英文冒号{}分隔。当有多条声明时，中间可以英文分号;分隔。123选择器&amp;#123;    样式;&amp;#125; 从CSS 样式代码插入的形式来看基本可以分为以下3种：内联式、嵌入式和外部式三种。优先级遵循就近原则，一般来说，内联式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web开发学习笔记-CSS基础篇">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/web开发学习笔记-CSS基础篇/index.html">
 <meta property="og:site_name" content="Hyoyew">
-<meta property="og:description" content="Stay hungry ,stay foolish!">
+<meta property="og:description" content="基础知识CSS 样式由选择符和声明组成，而声明又由属性和值组成。 选择符：又称选择器，指明网页中要应用样式规则的元素。声明：在英文大括号{}中的的就是声明，属性和值之间用英文冒号{}分隔。当有多条声明时，中间可以英文分号;分隔。123选择器&amp;#123;    样式;&amp;#125; 从CSS 样式代码插入的形式来看基本可以分为以下3种：内联式、嵌入式和外部式三种。优先级遵循就近原则，一般来说，内联式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T09:07:59.909Z">
+<meta property="og:updated_time" content="2018-04-07T04:23:59.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发学习笔记-CSS基础篇">
-<meta name="twitter:description" content="Stay hungry ,stay foolish!">
+<meta name="twitter:description" content="基础知识CSS 样式由选择符和声明组成，而声明又由属性和值组成。 选择符：又称选择器，指明网页中要应用样式规则的元素。声明：在英文大括号{}中的的就是声明，属性和值之间用英文冒号{}分隔。当有多条声明时，中间可以英文分号;分隔。123选择器&amp;#123;    样式;&amp;#125; 从CSS 样式代码插入的形式来看基本可以分为以下3种：内联式、嵌入式和外部式三种。优先级遵循就近原则，一般来说，内联式">
 
 
 
@@ -384,7 +384,17 @@
       
 
       
-        
+        <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>CSS 样式由选择符和声明组成，而声明又由属性和值组成。</p>
+<p>选择符：又称选择器，指明网页中要应用样式规则的元素。<br>声明：在英文大括号<strong>{}</strong>中的的就是声明，属性和值之间用英文冒号<strong>{}</strong>分隔。当有多条声明时，中间可以英文分号<strong>;</strong>分隔。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;</span><br><span class="line">    样式;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从CSS 样式代码插入的形式来看基本可以分为以下3种：<strong>内联式、嵌入式和外部式三种</strong>。<br>优先级遵循就近原则，一般来说，<strong>内联式 &gt; 嵌入式 &gt; 外部式</strong>。<br>-内联式<br>  *例子 </p><p style="color:red;font-size:12px">这里文字是红色。</p><br>-嵌入式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    span&#123;</span><br><span class="line">        color:red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><p></p>
+<p>-外部式<br>  *例子：<link href="base.css" rel="stylesheet" type="text/css"></p>
+<h1 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h1><p>  常见的类选择器类型有如下几种：</p>
+<p>-标签选择器，<br>  <em>.标签选择器名称{css样式代码;}<br>-类选择器，
+  </em>.类选器名称{css样式代码;}<br>-ID 选择器，<br>  <em>＃类选器名称{css样式代码;}<br>-子选择器，
+  </em>即大于符号(&gt;),用于选择指定标签元素的第一代子元素<br>-包含选择器，<br>  <em>即加入空格 ,用于选择指定标签元素下的后辈元素<br>-通用选择器，
+  </em>匹配html中所有标签元素，* {css样式代码;}<br>类选择器和ID选择器都可以应用于任何元素，但 <strong>ID 选择器只能在文档中使用一次</strong>，可以使用类选择器词列表方法为一个元素同时设置多个样式，ID 选择器是不可以的。</p>
+<p>子选择器和包含选择器区别：<strong>&gt;</strong>作用于元素的第一代后代，空格作用于元素的所有后代。</p>
+
       
     </div>
     
@@ -511,8 +521,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -624,6 +643,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-选择器"><span class="nav-number">2.</span> <span class="nav-text">CSS 选择器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
