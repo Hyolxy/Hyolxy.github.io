@@ -88,7 +88,7 @@
 <meta property="og:description" content="Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/Markdown使用笔记.jpg">
-<meta property="og:updated_time" content="2018-04-07T12:22:24.987Z">
+<meta property="og:updated_time" content="2018-04-07T12:23:21.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown使用笔记">
 <meta name="twitter:description" content="Hexo下使用的MarkDown为Github的GFM，风格很漂亮，简洁美观大方。但是GFM 的MarkDown语法和标准 的MarkDown稍有不同，使用过程中需要注意一些">
@@ -471,7 +471,25 @@
 <li>文本3</li>
 </ol>
 <h1 id="表"><a href="#表" class="headerlink" title="表"></a>表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| First Header  | Second Header |</span><br><span class="line">| ------------- | ------------- |</span><br><span class="line">| Content Cell  | Content Cell  |</span><br><span class="line">| Content Cell  | Content Cell  |</span><br></pre></td></tr></table></figure>
-<p>效果如下：<br>| First Header  | Second Header |<br>| ————- | ————- |<br>| Content Cell  | Content Cell  |<br>| Content Cell  | Content Cell  |</p>
+<p>效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
 <h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><p>两种方法：</p>
 <ol>
 <li>在 Markdown 中建立代码区块很简单，只要简单地<code>缩进 4 个空格</code>或是 <code>1 个制表符</code>就可以<br>当前面有<code>-</code>的列表语句时，此时<strong>换成两个制表符</strong>就可以了</li>
