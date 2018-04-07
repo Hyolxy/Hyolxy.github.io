@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="web基础,doGet和doPost," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="Stay hungry ,stay foolish!">
+<meta name="description" content="doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。">
+<meta name="keywords" content="web基础,doGet和doPost">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Servlet中doGet与doPost的区别">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/Servlet中doGet与doPost的区别/index.html">
 <meta property="og:site_name" content="Hyoyew">
-<meta property="og:description" content="Stay hungry ,stay foolish!">
+<meta property="og:description" content="doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T08:40:47.240Z">
+<meta property="og:image" content="http://yoursite.com/images/Servlet中doGet与doPost的区别.jpg">
+<meta property="og:updated_time" content="2018-04-07T11:18:11.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Servlet中doGet与doPost的区别">
-<meta name="twitter:description" content="Stay hungry ,stay foolish!">
+<meta name="twitter:description" content="doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。">
+<meta name="twitter:image" content="http://yoursite.com/images/Servlet中doGet与doPost的区别.jpg">
 
 
 
@@ -346,6 +349,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/" itemprop="url" rel="index">
+                    <span itemprop="name">web开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/Servlet/" itemprop="url" rel="index">
+                    <span itemprop="name">Servlet</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -384,7 +420,30 @@
       
 
       
-        
+        <img src="/images/Servlet中doGet与doPost的区别.jpg" width="900" height="445">
+<p>doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。 <a id="more"></a> </p>
+<h1 id="通过JSP页面访问Servlet"><a href="#通过JSP页面访问Servlet" class="headerlink" title="通过JSP页面访问Servlet"></a>通过JSP页面访问Servlet</h1><p>首先我们要知道什么时候用到doGet和doPost：<br>Answer:<strong>当通过JSP页面访问Servlet时</strong></p>
+<p>我们可以通过<strong>JSP页面的表单</strong>或者<strong>超链接</strong>请求某个servlet。<br>通过JSP页面访问servlet的好处是JSP页面负责页面的静态信息处理，动态信息处理有Servlet完成。</p>
+<ol>
+<li><p>通过表单访问servlet</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action 访问=&quot;islogin&quot; method=&quot;post&quot;&gt;</span><br><span class="line"></span><br><span class="line">....</span><br><span class="line"></span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过超链接访问Servlet<br>在JSP页面中，可以单击超链接访问Servlet对象，同时可以通过链接向Servlet提交信息。<br>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a herf =&quot;loginSerlet? user=ty&amp;pwd=zg&quot;&gt;查看用户名和密码&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>“查看用户名和密码”这个超链接就将<code>user</code>和<code>pwd</code>的两个信息提交给Servlet处理。</p>
+<h1 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h1><p>当服务器创建servlet对象后，servlet对象调用<code>init</code>方法初始化自己。<br>当服务器收到一个Servlet请求时，就会产生一个新进程，在这个线程中，让Servlet对象调用service（）方法为请求做出响应。<br>service方法首先检查HTTP请求类型（get或post），并根据用户的请求方式，在service（）方法中对应的调用doGet()或doPost()方法。</p>
+<p>优点：<br>在Servlet类中重写doGet()或doPost()方法来响应用户的请求，可以增加响应的灵活度，同时减轻服务器的负担。</p>
+<p>一般情况下无论用户请求是post或get,服务器的处理过程完全相同。<br>我们也可以在doPost()中写处理过程的代码，而在doGet()方法内再调用doPost方法。</p>
+<h1 id="Get和Post的区别："><a href="#Get和Post的区别：" class="headerlink" title="Get和Post的区别："></a>Get和Post的区别：</h1><ol>
+<li>get是从服务器上获取数据，post是向服务器传送数据。</li>
+<li>在客户端，Get方式在通过<code>URL</code>提交数据，数据在URL中可以看到；POST方式，数据放置在<code>HTML HEADER</code>内提交。</li>
+<li>对于get方式，服务器端用<code>Request.QueryString</code>获取变量的值，对于post方式，服务器端用<code>Request.Form</code>获取提交的数据。</li>
+<li>GET方式提交的数据最多只能有1024字节，而POST则没有此限制。</li>
+<li>安全性问题。正如在1中提到，使用 Get 的时候，参数会显示在地址栏上，而 Post 不会。<br>所以，如果这些数据是中文数据而且是非敏感数据，那么使用 get；如果用户输入的数据不是中文字符而且包含敏感数据，那么还是使用 post为好。</li>
+</ol>
+
       
     </div>
     
@@ -411,6 +470,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web基础/" rel="tag"># web基础</a>
+          
+            <a href="/tags/doGet和doPost/" rel="tag"># doGet和doPost</a>
+          
+        </div>
       
 
       
@@ -511,8 +578,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -542,7 +618,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -553,7 +629,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -624,6 +700,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通过JSP页面访问Servlet"><span class="nav-number">1.</span> <span class="nav-text">通过JSP页面访问Servlet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Get和Post的区别："><span class="nav-number">3.</span> <span class="nav-text">Get和Post的区别：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
