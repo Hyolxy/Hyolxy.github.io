@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="web基础,MarkDown的常用语法," />
 
 
 
@@ -79,17 +79,23 @@
 
 
 
-<meta name="description" content="Stay hungry ,stay foolish!">
+<meta name="description" content="doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。">
+<meta name="keywords" content="web基础,MarkDown的常用语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown使用笔记">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/Markdown使用笔记/index.html">
 <meta property="og:site_name" content="Hyoyew">
-<meta property="og:description" content="Stay hungry ,stay foolish!">
+<meta property="og:description" content="doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T10:05:28.234Z">
+<meta property="og:image" content="http://yoursite.com/images/Markdown使用笔记.jpg">
+<meta property="og:image" content="http://yoursite.com/path/to/img.jpg">
+<meta property="og:image" content="http://yoursite.com/path/to/img.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/31/Markdown使用笔记/url/to/image">
+<meta property="og:updated_time" content="2018-04-07T12:06:17.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown使用笔记">
-<meta name="twitter:description" content="Stay hungry ,stay foolish!">
+<meta name="twitter:description" content="doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。">
+<meta name="twitter:image" content="http://yoursite.com/images/Markdown使用笔记.jpg">
 
 
 
@@ -346,6 +352,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/开发/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/开发/MarkDown/" itemprop="url" rel="index">
+                    <span itemprop="name">MarkDown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -384,7 +423,91 @@
       
 
       
-        
+        <img src="/images/Markdown使用笔记.jpg" width="900" height="445">
+<p>doGet和doPost其实就是用来接收前端传过来的数据，本质上都是请求方法。 <a id="more"></a> </p>
+<h1 id="概要介绍"><a href="#概要介绍" class="headerlink" title="概要介绍"></a>概要介绍</h1><p>Markdown 是一种轻量级的「标记语言」，优点在于 </p>
+<ul>
+<li>专注你的文字内容而不是排版样式。 </li>
+<li>轻松的导出 HTML、PDF 和本身的 .md 文件。 </li>
+<li>纯文本内容，兼容所有的文本编辑器与字处理软件。 </li>
+<li>可读，直观。适合所有人的写作语言。</li>
+</ul>
+<h1 id="语法简明概述"><a href="#语法简明概述" class="headerlink" title="语法简明概述"></a>语法简明概述</h1><ul>
+<li>分段 <code>两个回车</code></li>
+<li>换行 <code>两个空格 或者 回车</code></li>
+<li>标题 <code># ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题</code></li>
+<li>强调 <code>**文字** ， __文字__ ， _文字_ ， *文字* ， 文字</code></li>
+<li>模块引用 <code>&gt; 注意后面紧跟个空格</code></li>
+<li>表格 <code>- 和 | 分割行和列 ， : 控制对其方式</code></li>
+<li>代码块 `四个空格 开头或， 使用<figure class="highlight plain"><figcaption><span>````</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 链接 `[文字](链接地址)`</span><br><span class="line">- 图片 `![图片说明](图片地址) ，地址可以是本地路劲，也可以是网络地址`</span><br><span class="line">- 列表 `* ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格`</span><br><span class="line"></span><br><span class="line"># 内容强调</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>字体 <strong>加粗</strong> 显示<br>字体 <em>斜体</em> 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;加粗、斜体</span><br><span class="line">&gt;字体 **加粗** 显示</span><br><span class="line">&gt;字体 *斜体* 显示</span><br><span class="line">&gt;字体 ***加粗并斜体*** 显示</span><br></pre></td></tr></table></figure></p>
+<p>字体 <strong>加粗</strong> 显示<br>字体 <em>斜体</em> 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br>组合 <em><strong>加粗并斜体</strong></em> 显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;字体 __加粗__ 显示</span><br><span class="line">&gt;字体 _斜体_ 显示</span><br><span class="line">&gt;字体 ___加粗并斜体___ 显示</span><br><span class="line">&gt;组合 *__加粗并斜体__* 显示</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 列表</span><br><span class="line"></span><br><span class="line">无序代码:</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>文本1<ul>
+<li>二级文本</li>
+</ul>
+</li>
+<li>文本2</li>
+<li>文本3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">效果如下：</span><br><span class="line">- 文本1</span><br><span class="line">    * 二级文本</span><br><span class="line">- 文本2</span><br><span class="line">- 文本3</span><br><span class="line">有序代码：</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>文本1<ol>
+<li>2121</li>
+<li>电影</li>
+</ol>
+</li>
+<li>文本2</li>
+<li>文本3<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">效果如下：</span><br><span class="line">1. 文本1</span><br><span class="line">    1. 2121</span><br><span class="line">    2. 电影</span><br><span class="line">2. 文本2</span><br><span class="line">3. 文本3</span><br><span class="line"></span><br><span class="line"># 表</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">效果如下：</span><br><span class="line">| First Header  | Second Header |</span><br><span class="line">| ------------- | ------------- |</span><br><span class="line">| Content Cell  | Content Cell  |</span><br><span class="line">| Content Cell  | Content Cell  |</span><br><span class="line"></span><br><span class="line"># code</span><br><span class="line">两种方法：</span><br><span class="line">1. 在 Markdown 中建立代码区块很简单，只要简单地`缩进 4 个空格`或是 `1 个制表符`就可以</span><br><span class="line">当前面有`-`的列表语句时，此时__换成两个制表符__就可以了</span><br><span class="line">2. 前后加(三个点点点)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>填充(padding)<br>元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。<pre><code>div{padding:20px 10px 15px 30px;}/*上、右、下、左(顺时针)，顺序不要搞混*/
+div{
+</code></pre>  padding-top:20px;<br>  padding-right:10px;<br>  padding-bottom:15px;<br>  padding-left:30px;<pre><code>}
+div{padding:10px;}/*上、右、下、左的填充都为10px;*/
+div{padding:10px 20px;}/*上下填充一样为10px，左右一样为20px*/  
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">效果如下：</span><br><span class="line">- 填充(padding)</span><br><span class="line">元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左(顺时针)。</span><br><span class="line">		div&#123;padding:20px 10px 15px 30px;&#125;/*上、右、下、左(顺时针)，顺序不要搞混*/</span><br><span class="line">		div&#123;</span><br><span class="line">    padding-top:20px;</span><br><span class="line">    padding-right:10px;</span><br><span class="line">    padding-bottom:15px;</span><br><span class="line">    padding-left:30px;</span><br><span class="line">		&#125;</span><br><span class="line">		div&#123;padding:10px;&#125;/*上、右、下、左的填充都为10px;*/</span><br><span class="line">		div&#123;padding:10px 20px;&#125;/*上下填充一样为10px，左右一样为20px*/  </span><br><span class="line"></span><br><span class="line">		</span><br><span class="line"># 图片</span><br><span class="line">Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式:`行内式`和`参考式`。</span><br><span class="line">- 行内式的图片语法</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/path/to/img.jpg" alt="Alt text">//方括号里面放上图片的替代文字,接着的普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 ‘title’ 文字<br><img src="/path/to/img.jpg" alt="Alt text" title="Optional title"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 参考式的图片语法</span><br></pre></td></tr></table></figure></p>
+<p><img src="url/to/image" alt="Alt text" title="Optional title attribute"><br>//「id」是图片参考的名称，<br>//图片参考的定义方式则和连结参考一样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 水平规则</span><br></pre></td></tr></table></figure>
+<h2 id="Three-or-more…"><a href="#Three-or-more…" class="headerlink" title="Three or more…"></a>Three or more…</h2><p>Hyphens</p>
+<hr>
+<p>Asterisks<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">效果如下：</span><br><span class="line">Three or more...</span><br><span class="line">---</span><br><span class="line">Hyphens</span><br><span class="line">***</span><br><span class="line">Asterisks</span><br><span class="line"></span><br><span class="line"># 反斜杠</span><br><span class="line">Markdown 可以利用`反斜杠`来插入一些在语法中有其它意义的符号</span><br><span class="line">例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用 `&lt;em&gt;` 标签），你可以在星号的前面加上反斜杠：</span><br></pre></td></tr></table></figure></p>
+<p>*literal asterisks*<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</span><br></pre></td></tr></table></figure></p>
+<p>\   反斜线<code></code>   反引号</p>
+<ul>
+<li>星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<h1 id="井字号"><a href="#井字号" class="headerlink" title="井字号"></a>井字号</h1></li>
+</ul>
+<ul>
+<li>加号</li>
+</ul>
+<ul>
+<li>减号<br>.   英文句点<br>!   惊叹号<br>```</li>
+</ul>
+
       
     </div>
     
@@ -411,6 +534,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web基础/" rel="tag"># web基础</a>
+          
+            <a href="/tags/MarkDown的常用语法/" rel="tag"># MarkDown的常用语法</a>
+          
+        </div>
       
 
       
@@ -507,8 +638,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -538,7 +678,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -549,7 +689,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -620,6 +760,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概要介绍"><span class="nav-number">1.</span> <span class="nav-text">概要介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语法简明概述"><span class="nav-number">2.</span> <span class="nav-text">语法简明概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Three-or-more…"><span class="nav-number">2.1.</span> <span class="nav-text">Three or more…</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#井字号"><span class="nav-number">3.</span> <span class="nav-text">井字号</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
