@@ -88,7 +88,7 @@
 <meta property="og:description" content="Ajax笔记">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/web开发学习笔记-Ajax笔记.jpg">
-<meta property="og:updated_time" content="2018-04-07T10:50:49.431Z">
+<meta property="og:updated_time" content="2018-04-07T10:54:54.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web开发学习笔记-Ajax笔记">
 <meta name="twitter:description" content="Ajax笔记">
@@ -486,7 +486,7 @@
 <li><p>GET请求<br>常用于向服务器查询某些信息，可将查询字符串参数追加到url末尾。必须对查询字符串进行<code>encodeURIComponent()</code>编码，具体来说必须对参数名和参数值都进行编码才能附加到url后面。<br>向现有url追加查询字符串参数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function addURLPara(url,name,value)&#123;</span><br><span class="line">    url += (url.indexOf(&quot;?&quot;) == -1 ? &quot;?&quot;:&quot;&amp;&quot;);</span><br><span class="line">    url += encodeURIComponent(name)+&quot;=&quot;+encodeURIComponent(value);</span><br><span class="line">    return url;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>POST请求<br>用于向服务器发送应当被保存的数据（修改服务器端数据），数据是请求的主体。<br>使用POST方式： </p>
+<li><p>POST请求<br>用于向服务器发送应当被保存的数据（修改服务器端数据），数据是请求的主体。<br>什么时候使用POST方式？： </p>
 </li>
 </ol>
 <ul>
@@ -496,24 +496,17 @@
 </ul>
 <h2 id="表单数据序列化"><a href="#表单数据序列化" class="headerlink" title="表单数据序列化"></a>表单数据序列化</h2><p>通过XHR发送到服务器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function submitData()&#123;</span><br><span class="line">    var xhr = createXHR();</span><br><span class="line">    xhr.onreadystatechange=function()&#123;</span><br><span class="line">    if(xhr.readyState==4)&#123;</span><br><span class="line">         if(xhr.status&gt;=200 &amp;&amp; xhr.status&lt;300 || xhr.status==304)&#123;</span><br><span class="line">            //do something</span><br><span class="line">         &#125;else&#123;</span><br><span class="line">            alert(&quot;request was unsuccessful: &quot;+xhr.status);</span><br><span class="line">         &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    xhr.open(&quot;post&quot;,&quot;url&quot;,true);</span><br><span class="line">    xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;); //表单提交时的内容类型，如果提交的是表单数据必须要写这个                                                                             </span><br><span class="line">    var form = document.getElementById(&quot;user-info&quot;);</span><br><span class="line">    xhr.send(serialize(form));//表单序列化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用<code>该方式</code>必须设置<strong>自定义请求头部信息<code>Content-Type</code></strong>，以说明请求的内容类型。<br>这样服务器就会根据请求的内容类型来解析表单中的数据。<br>在通过<code>post</code>方式请求表单中，在<code>open</code>和<code>send</code>之间，要添加<code>request.setRequestHeader(“Content-Type”,”application/x-www-form-urlencoded”)</code><br>如果不设置content-type头部，那么发送给服务器的数据就不会出现在$_POST超级全局变量中。</p>
-<h1 id="拾遗："><a href="#拾遗：" class="headerlink" title="拾遗："></a>拾遗：</h1><h2 id="GET-还是-POST？"><a href="#GET-还是-POST？" class="headerlink" title="GET 还是 POST？"></a>GET 还是 POST？</h2><p>与 POST 相比，GET 更简单也更快，并且在<strong>大部分情况下</strong>都能用。</p>
-<p>然而，在以下情况中，<strong>请使用 POST 请求</strong>：</p>
+<h1 id="拾遗："><a href="#拾遗：" class="headerlink" title="拾遗："></a>拾遗：</h1><h2 id="GET-还是-POST？"><a href="#GET-还是-POST？" class="headerlink" title="GET 还是 POST？"></a>GET 还是 POST？</h2><p>与 POST 相比，GET 更简单也更快，并且在<strong>大部分情况下</strong>都能用。<br>然而，在以下情况中，<strong>请使用 POST 请求</strong>：</p>
 <ul>
-<li><p>无法使用缓存文件（更新服务器上的文件或数据库）</p>
-</li>
-<li><p>向服务器发送大量数据（POST 没有数据量限制）</p>
-</li>
-<li><p>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</p>
-</li>
+<li>无法使用缓存文件（更新服务器上的文件或数据库）</li>
+<li>向服务器发送大量数据（POST 没有数据量限制）</li>
+<li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li>
 </ul>
 <h2 id="异步-True-或-False？"><a href="#异步-True-或-False？" class="headerlink" title="异步 - True 或 False？"></a>异步 - True 或 False？</h2><p>AJAX 指的是异步 <code>JavaScript</code> 和 <code>XML（Asynchronous JavaScript and XML）</code>。</p>
 <ul>
-<li><p>为 <code>True</code> 的话，表示的是异步，异步表示程序请求服务器的同时，程序可以继续执行；能提高系统的运行效率；</p>
-</li>
-<li><p>为 <code>False</code> 的话，表示同步，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。</p>
-</li>
+<li>为 <code>True</code> 的话，表示的是异步，异步表示程序请求服务器的同时，程序可以继续执行；能提高系统的运行效率；</li>
+<li>为 <code>False</code> 的话，表示同步，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。<br><strong>我们一般都是用 True；</strong></li>
 </ul>
-<p><strong>我们一般都是用 True；</strong></p>
 
       
     </div>
