@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://yoursite.com/images/session应用1.png">
 <meta property="og:image" content="http://yoursite.com/images/session应用2.png">
 <meta property="og:image" content="http://yoursite.com/images/session应用3.png">
-<meta property="og:updated_time" content="2018-04-08T12:09:47.471Z">
+<meta property="og:updated_time" content="2018-04-08T12:10:34.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb入门笔记-6-cookie和session">
 <meta name="twitter:description" content="Cookie是客户端技术；Session是服务器端技术。这里重点讲一下session。">
@@ -425,7 +425,9 @@
       
         <img src="/images/Javaweb入门笔记-6-cookie和session.jpg" width="900" height="445">
 <p>Cookie是客户端技术；Session是服务器端技术。这里重点讲一下session。<a id="more"></a> </p>
+<blockquote>
 <p>API:<br><a href="https://tomcat.apache.org/tomcat-8.0-doc/servletapi/index.html?javax/servlet/http/Cookie.html" target="_blank" rel="noopener">javax.servlet.http:Class Cookie</a><br><a href="https://tomcat.apache.org/tomcat-8.0-doc/servletapi/index.html?javax/servlet/http/HttpSession.html" target="_blank" rel="noopener">javax.servlet.http:Interface HttpSession</a></p>
+</blockquote>
 <h1 id="session对象概要介绍"><a href="#session对象概要介绍" class="headerlink" title="session对象概要介绍"></a>session对象概要介绍</h1><p>web服务器会给每一个用户自动创建一个<code>session</code>对象，为每一个<code>session</code>对象分配一个唯一表识的<code>String</code>类型的<code>ID</code>，这个<code>ID</code>用来区分其他用户。这样每个用户都对应一个session对象，不同用户的<code>session</code>对象互相不同。</p>
 <ul>
 <li>当在不同文件夹里放不同的jsp文件并分别运行时：一个用户在同一个web服务目录中只有一个session对象<ul>
