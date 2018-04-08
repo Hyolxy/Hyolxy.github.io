@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Hyoyew">
 <meta property="og:description" content="前言本文对指令按照使用场景(建库，查看，修改，分支)进行分类归纳，介绍指令基本含义和用法，方便查阅。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-08T12:35:07.105Z">
+<meta property="og:updated_time" content="2018-04-08T12:51:30.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用笔记">
 <meta name="twitter:description" content="前言本文对指令按照使用场景(建库，查看，修改，分支)进行分类归纳，介绍指令基本含义和用法，方便查阅。">
@@ -432,7 +432,7 @@
 <p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以,现在git commit就是往master分支上提交更改。<br><strong>简单理解</strong>:需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
 <h1 id="本地库和远程库"><a href="#本地库和远程库" class="headerlink" title="本地库和远程库"></a>本地库和远程库</h1><hr>
 <h2 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h2><ul>
-<li>建立远程库(为空，不要加README.md，不然后面会push不上去)</li>
+<li>建立远程库(为空，不要加<code>README.md</code>，不然后面会<code>push</code>不上去)</li>
 <li>本地新建文件夹</li>
 <li><code>git init</code>初始化仓库，可以发现当前目录下多了一个<code>.git</code>的目录，这个目录是Git来跟踪管理版本库的。<strong>勿人为瞎改</strong></li>
 <li>远程库的名字就是origin，这是Git默认的叫法</li>
@@ -440,14 +440,13 @@
 <li><code>git push -u origin master</code> 把本地库的所有内容推送到远程库上。把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数(推送和关联)，Git不但会把本地的master分支内容推送到远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</li>
 <li><code>git push origin master</code>每次本地提交后,推送最新修改到远程库</li>
 </ul>
-<h2 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h2><p>假设github上面已经有一个远程库，但是本地没有，需要克隆到本地，远程库的名字叫gitskills</p>
-<p><code>git clone git@github.com:michaelliao/gitskills.git</code>克隆一个本地库,则在当前文件夹下会多一个<code>gitskills</code>的文件夹。<br><code>cd gitskills</code>进入克隆下来的本地库，默认的名字是和github上的一样的<br><code>git push origin master</code> 推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上</p>
+<h2 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h2><p>假设github上面已经有一个远程库，但是本地没有，需要克隆到本地，远程库的名字叫<code>gitskills</code><br><code>git clone git@github.com:michaelliao/gitskills.git</code>克隆一个本地库,则在当前文件夹下会多一个<code>gitskills</code>的文件夹<br><code>cd gitskills</code>进入克隆下来的本地库，默认的名字是和github上的一样的<br><code>git push origin master</code> 推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上</p>
 <h1 id="常用查看指令"><a href="#常用查看指令" class="headerlink" title="常用查看指令"></a>常用查看指令</h1><ul>
 <li><code>git status</code>查看仓库当前的状态</li>
-<li><code>git diff</code> 文件名查看对文件做什么修改</li>
-<li><code>git diff</code> 版本号1 版本号2 <code>--stat</code>查看两个版本的差异的文件列表，包括被修改行数和增删图。参数改为<code>--name-status</code>前面显示修改说明字母(A,M等)，无行数</li>
+<li><code>git diff 文件名</code>查看对文件做什么修改</li>
+<li><code>git diff 版本号1 版本号2 --stat</code>查看两个版本的差异的文件列表，包括被修改行数和增删图。参数改为<code>--name-status</code>前面显示修改说明字母(A,M等)，无行数</li>
 <li><code>git log</code>显示从最近到最远的提交日志</li>
-<li><code>git log --pretty=oneline</code> 简化日志输出的显示信息，<code>commit id</code>很长,详细显示见这里</li>
+<li><code>git log --pretty=oneline</code> 简化日志输出的显示信息，<code>commit id</code>很长</li>
 <li><code>git reflog</code> 记录你的每一次命令，最先显示的是这个命令执行之后的版本的版本号的前七位，这样就算你清屏了或者重启了，也能找到某个版本的版本号，就可以轻松回退到那个版本</li>
 <li><code>git branch</code> 查看当前所在的分支。<code>git branch</code>命令会列出所有分支，当前分支前面会标一个*号</li>
 <li><code>git log --graph --pretty=oneline --abbrev-commit</code>用带参数的<code>git log</code>可以看到分支的合并情况。用<code>git log --graph</code>命令可以看到分支合并图</li>
@@ -461,14 +460,12 @@
 <h2 id="修改commit版本中的注释"><a href="#修改commit版本中的注释" class="headerlink" title="修改commit版本中的注释"></a>修改commit版本中的注释</h2><p>修改已经commit版本里面的注释<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//如果你的注释写错了</span><br><span class="line">$ git commit --amend</span><br><span class="line">//如果需要修改当前版本的倒数第二次状态</span><br><span class="line">$ git rebase --i HEAD~2</span><br><span class="line">//会出现pick:***的几行，将你要改的那行的pick改成edit然后退出</span><br><span class="line">//这时使用$ git <span class="built_in">log</span>你会发现最上面的版本已经变成了你想改的那个</span><br><span class="line">$ git commit --amend</span><br><span class="line">//修改版本提交注释之后执行下面的就成功了</span><br><span class="line">$ git rebase --<span class="built_in">continue</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="撤销修改和版本回退"><a href="#撤销修改和版本回退" class="headerlink" title="撤销修改和版本回退"></a>撤销修改和版本回退</h1><ul>
 <li><code>git checkout -- 文件名</code>把没暂存(即没add)的干掉，或者说，丢弃工作区，回到到暂存状态</li>
-<li><p><code>git reset HEAD 文件名</code>把暂存的状态取消，工作区内容不变，但状态变为“未暂存”。<br>简单来说，没有add过的修改，只需要<code>git checkout -- 文件名</code>即可撤销；add 过的修改，先<code>git reset HEAD 文件名</code>变成没add 过的修改，再<code>git checkout -- 文件名</code>撤销。</p>
-</li>
-<li><p><code>git reset --hard HEAD^</code>会回退到上一个版本</p>
-</li>
-<li><code>git reset --hard</code>某版本号前几位通过命令行上的历史信息（假如你没清屏的话），找到某版本 的版本号回到指定版本。不一定要全部的版本号，就像这个命令的例子，只要前面的约7、8位这样就可以。</li>
+<li><code>git reset HEAD 文件名</code>把暂存的状态取消，工作区内容不变，但状态变为“未暂存”。<br>简单来说，没有add过的修改，只需要<code>git checkout -- 文件名</code>即可撤销；add 过的修改，先<code>git reset HEAD 文件名</code>变成没add 过的修改，再<code>git checkout -- 文件名</code>撤销。</li>
+<li><code>git reset --hard HEAD^</code>会回退到上一个版本</li>
+<li><code>git reset --hard 某版本号前几位</code>通过命令行上的历史信息（假如你没清屏的话），找到某版本 的版本号回到指定版本。不一定要全部的版本号，就像这个命令的例子，只要前面的约7、8位这样就可以。</li>
 </ul>
 <h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h2><ul>
-<li><code>git checkout -b dev</code>创建一个新的分支：dev，并且会切换到dev分支。所以这条命令有两个作用。<code>git checkout</code>命令加上<code>-b参数表示创建并切换，相当于以下两条命令：</code>git branch dev<code>和</code>git checkout dev`</li>
+<li><code>git checkout -b dev</code>创建一个新的分支：<code>dev</code>，并且会切换到dev分支。所以这条命令有两个作用。<code>git checkout</code>命令加上<code>-b</code>参数表示创建并切换，相当于以下两条命令：<code>git branch dev</code>和<code>git checkout dev</code></li>
 <li><code>git branch dev</code>，新建分支是新建指针,指向当前commit</li>
 <li><code>git checkout dev</code>切换到dev分支</li>
 <li><code>git checkout master</code> dev分支的工作完成，我们就可以切换回master分支(此时在dev分支的修改在master上是看不到的)</li>
