@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Stay hungry ,stay foolish!">
+<meta name="description" content="session对象 web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。 当在不同文件夹里放不同的jsp文件并分别运行时： 一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javaweb入门笔记-6-cookie和session">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/Javaweb入门笔记-6-cookie和session/index.html">
 <meta property="og:site_name" content="Hyoyew">
-<meta property="og:description" content="Stay hungry ,stay foolish!">
+<meta property="og:description" content="session对象 web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。 当在不同文件夹里放不同的jsp文件并分别运行时： 一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-07T09:07:25.716Z">
+<meta property="og:updated_time" content="2018-04-08T10:35:02.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb入门笔记-6-cookie和session">
-<meta name="twitter:description" content="Stay hungry ,stay foolish!">
+<meta name="twitter:description" content="session对象 web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。 当在不同文件夹里放不同的jsp文件并分别运行时： 一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他">
 
 
 
@@ -384,7 +384,12 @@
       
 
       
-        
+        <p>session对象</p>
+<p>web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。</p>
+<p>当在不同文件夹里放不同的jsp文件并分别运行时：</p>
+<p>一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他页面时，web服务器不会在重新分配session对象，直到用户关闭浏览器或这个session对象达到了它的生存期限。当用户重新打开浏览器再次访问该web目录时，web服务器为该用户在创建一个新的session对象。</p>
+<p>需要注意的是：同一个用户在多个不同的web服务目录中对应的session对象时不同的，一个服务目录对应一个session对象</p>
+
       
     </div>
     
@@ -542,7 +547,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -553,7 +558,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

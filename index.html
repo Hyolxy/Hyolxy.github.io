@@ -1711,6 +1711,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/" itemprop="url" rel="index">
+                    <span itemprop="name">web开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/JSP/" itemprop="url" rel="index">
+                    <span itemprop="name">JSP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -1750,9 +1783,15 @@
 
       
         
-          
-            
-          
+          <img src="/images/Javaweb入门笔记-5-JSP技术.jpg" width="900" height="445">
+<p>JSP：一种动态web资源的开发技术<br>基本介绍：<br>1.JSP全名为Java Server Pages中文名叫java服务器页面 后缀名为(*.jsp)<br>2.用JSP开发的Web应用是跨平台的，既能在Linux下运行，也能在其他操作系统上运行。<br>3.它实现了Html语法中的java扩张（以 &lt;%, %&gt;形式）。JSP与Servlet一样，是在服务器端执行的。通常返回给客户端的就是一个HTML文本，因此客户端只要有浏览器就能浏览。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/31/Javaweb入门笔记-5-JSP技术/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1888,7 +1927,12 @@
       
         
           
-            
+            <p>session对象</p>
+<p>web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。</p>
+<p>当在不同文件夹里放不同的jsp文件并分别运行时：</p>
+<p>一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他页面时，web服务器不会在重新分配session对象，直到用户关闭浏览器或这个session对象达到了它的生存期限。当用户重新打开浏览器再次访问该web目录时，web服务器为该用户在创建一个新的session对象。</p>
+<p>需要注意的是：同一个用户在多个不同的web服务目录中对应的session对象时不同的，一个服务目录对应一个session对象</p>
+
           
         
       
@@ -1995,7 +2039,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2006,7 +2050,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
