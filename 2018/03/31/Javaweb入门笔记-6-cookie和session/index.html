@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="web基础,JSP技术中的session," />
 
 
 
@@ -79,17 +79,23 @@
 
 
 
-<meta name="description" content="session对象 web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。 当在不同文件夹里放不同的jsp文件并分别运行时： 一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他">
+<meta name="description" content="Cookie是客户端技术；Session是服务器端技术。这里重点讲一下session。 API:javax.servlet.http:Class Cookiejavax.servlet.http:Interface HttpSession session对象概要介绍web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个I">
+<meta name="keywords" content="web基础,JSP技术中的session">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javaweb入门笔记-6-cookie和session">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/Javaweb入门笔记-6-cookie和session/index.html">
 <meta property="og:site_name" content="Hyoyew">
-<meta property="og:description" content="session对象 web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。 当在不同文件夹里放不同的jsp文件并分别运行时： 一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他">
+<meta property="og:description" content="Cookie是客户端技术；Session是服务器端技术。这里重点讲一下session。 API:javax.servlet.http:Class Cookiejavax.servlet.http:Interface HttpSession session对象概要介绍web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个I">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-08T10:35:02.987Z">
+<meta property="og:image" content="http://yoursite.com/images/Javaweb入门笔记-6-cookie和session.jpg">
+<meta property="og:image" content="http://yoursite.com/images/session应用1.png">
+<meta property="og:image" content="http://yoursite.com/images/session应用2.png">
+<meta property="og:image" content="http://yoursite.com/images/session应用3.png">
+<meta property="og:updated_time" content="2018-04-08T12:04:30.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb入门笔记-6-cookie和session">
-<meta name="twitter:description" content="session对象 web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。 当在不同文件夹里放不同的jsp文件并分别运行时： 一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他">
+<meta name="twitter:description" content="Cookie是客户端技术；Session是服务器端技术。这里重点讲一下session。 API:javax.servlet.http:Class Cookiejavax.servlet.http:Interface HttpSession session对象概要介绍web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个I">
+<meta name="twitter:image" content="http://yoursite.com/images/Javaweb入门笔记-6-cookie和session.jpg">
 
 
 
@@ -346,6 +352,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/" itemprop="url" rel="index">
+                    <span itemprop="name">web开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web开发/Session/" itemprop="url" rel="index">
+                    <span itemprop="name">Session</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -384,11 +423,40 @@
       
 
       
-        <p>session对象</p>
-<p>web服务器会给每一个用户自动创建一个session对象，为每一个session对象分配一个唯一表识的String类型的ID，这个ID用来区分其他用户。这样每个用户都对应一个session对象，不同用户的session对象互相不同。</p>
-<p>当在不同文件夹里放不同的jsp文件并分别运行时：</p>
-<p>一个用户在同一个web服务目录中只有一个session对象，当用户访问相同的web服务目录的其他页面时，web服务器不会在重新分配session对象，直到用户关闭浏览器或这个session对象达到了它的生存期限。当用户重新打开浏览器再次访问该web目录时，web服务器为该用户在创建一个新的session对象。</p>
-<p>需要注意的是：同一个用户在多个不同的web服务目录中对应的session对象时不同的，一个服务目录对应一个session对象</p>
+        <img src="/images/Javaweb入门笔记-6-cookie和session.jpg" width="900" height="445">
+<p>Cookie是客户端技术；Session是服务器端技术。这里重点讲一下session。</p>
+<p>API:<br><a href="https://tomcat.apache.org/tomcat-8.0-doc/servletapi/index.html?javax/servlet/http/Cookie.html" target="_blank" rel="noopener">javax.servlet.http:Class Cookie</a><br><a href="https://tomcat.apache.org/tomcat-8.0-doc/servletapi/index.html?javax/servlet/http/HttpSession.html" target="_blank" rel="noopener">javax.servlet.http:Interface HttpSession</a></p>
+<h1 id="session对象概要介绍"><a href="#session对象概要介绍" class="headerlink" title="session对象概要介绍"></a>session对象概要介绍</h1><p>web服务器会给每一个用户自动创建一个<code>session</code>对象，为每一个<code>session</code>对象分配一个唯一表识的<code>String</code>类型的<code>ID</code>，这个<code>ID</code>用来区分其他用户。这样每个用户都对应一个session对象，不同用户的<code>session</code>对象互相不同。</p>
+<ul>
+<li>当在不同文件夹里放不同的jsp文件并分别运行时：一个用户在同一个web服务目录中只有一个session对象<ul>
+<li>当用户访问相同的web服务目录的其他页面时，web服务器不会在重新分配<code>session</code>对象，直到用户关闭浏览器或这个<code>session</code>对象达到了它的生存期限。</li>
+<li>当用户重新打开浏览器再次访问该web目录时，web服务器为该用户在创建一个新的session对象。<br>需要注意的是：同一个用户在多个不同的<code>web服务目录</code>中对应的<code>session</code>对象时不同的，一个服务目录对应一个<code>session</code>对象</li>
+</ul>
+</li>
+</ul>
+<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><p>session对象由服务器创建</p>
+<ul>
+<li>创建：调用<code>request</code>对象的<code>getSession</code>方法后才会创建<code>session</code>对象;    <code>getSession(false</code>)`只获取， 不创建</li>
+<li>销毁：<strong>默认30分钟没人使用则自动销毁</strong>。失效时间可在<code>web.xml</code>的&lt;<code>session-config</code>&gt;标签中使用&lt;<code>session-timeout</code>&gt;，单位分钟；也可调用<code>session</code>对象的<code>invalidate方法</code>销毁</li>
+</ul>
+<h1 id="session对象的应用："><a href="#session对象的应用：" class="headerlink" title="session对象的应用："></a>session对象的应用：</h1><ul>
+<li>用户登录</li>
+<li>防止表单重复提交(暂时还不了解)</li>
+<li>一次性验证码的校验(暂时还不了解)</li>
+</ul>
+<p>使用session的案例:模拟在线考试系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;  </span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;  </span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;  </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;  </span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;  </span><br><span class="line">&lt;title&gt;session1&lt;/title&gt;  </span><br><span class="line">&lt;/head&gt;  </span><br><span class="line">&lt;body&gt;  </span><br><span class="line">&lt;form action=&quot;sessionTest2.jsp&quot; method=&quot;post&quot;&gt;  </span><br><span class="line">            考号：  </span><br><span class="line">            &lt;input type=&quot;text&quot; name=&quot;id&quot;/&gt;  </span><br><span class="line">            &lt;p&gt;  </span><br><span class="line">                一、单项选择题（每题2分）  </span><br><span class="line">                &lt;br/&gt;&lt;br/&gt;  </span><br><span class="line">                1.下列哪个方法是获取session中关键字是key的对象（ ）。  </span><br><span class="line">                &lt;br /&gt;  </span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;one&quot; value=&quot;A&quot;/&gt;  </span><br><span class="line">                A．public void setAttribute(String key, Object obj)&lt;br/&gt;  </span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;one&quot; value=&quot;B&quot;/&gt;  </span><br><span class="line">                B．public void removeAttribute(String key)&lt;br/&gt;  </span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;one&quot; value=&quot;C&quot;/&gt;  </span><br><span class="line">                C．public Enumeration getAttributeNames()&lt;br/&gt;  </span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;one&quot; value=&quot;D&quot;/&gt;  </span><br><span class="line">                D．public Object getAttibute(String key)&lt;br/&gt;  </span><br><span class="line">            &lt;/p&gt;  </span><br><span class="line">            &lt;p&gt;  </span><br><span class="line">                二、判断题（每题2分）  </span><br><span class="line">                &lt;br/&gt;&lt;br/&gt;  </span><br><span class="line">                1.同一客户在多个Web服务目录中，所对应的session对象是互不相同的。  </span><br><span class="line">                &lt;br/&gt;  </span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;two&quot; value=&quot;True&quot;/&gt;  </span><br><span class="line">                True  </span><br><span class="line">                &lt;input type=&quot;radio&quot; name=&quot;two&quot; value=&quot;False&quot;/&gt;  </span><br><span class="line">                False  </span><br><span class="line">            &lt;/p&gt;&lt;br/&gt;  </span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;提交&quot; name=submit&gt;  </span><br><span class="line">            &lt;input type=&quot;reset&quot; value=&quot;重置&quot; name=reset&gt;  </span><br><span class="line">        &lt;/form&gt;  </span><br><span class="line">&lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<img src="/images/session应用1.png" width="900" height="445">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;  </span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;  </span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;  </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;  </span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;  </span><br><span class="line">&lt;title&gt;session2&lt;/title&gt;  </span><br><span class="line">&lt;/head&gt;  </span><br><span class="line">&lt;body&gt;  </span><br><span class="line">   &lt;form action=&quot;sessionTest3.jsp&quot; method=&quot;post&quot;&gt;  </span><br><span class="line">            &lt;%  </span><br><span class="line">                //考号  </span><br><span class="line">                String id = request.getParameter(&quot;id&quot;);  </span><br><span class="line">                //把考号id以“id”为关键字存储到session对象中  </span><br><span class="line">                session.setAttribute(&quot;id&quot;, id);  </span><br><span class="line">                //单项选择第一题  </span><br><span class="line">                String first = request.getParameter(&quot;one&quot;);  </span><br><span class="line">                //把答案first以“one”为关键字存储到session对象中  </span><br><span class="line">                session.setAttribute(&quot;one&quot;, first);  </span><br><span class="line">                //判断第一题  </span><br><span class="line">                String second = request.getParameter(&quot;two&quot;);  </span><br><span class="line">                //把答案second以“two”为关键字存储到session对象中  </span><br><span class="line">                session.setAttribute(&quot;two&quot;, second);  </span><br><span class="line">            %&gt;  </span><br><span class="line">            您的考号：&lt;%=id%&gt;&lt;br/&gt;  </span><br><span class="line">            一、单项选择题（每题2分）  </span><br><span class="line">            &lt;br/&gt;  </span><br><span class="line">            1.&lt;%=first%&gt;  </span><br><span class="line">            &lt;br /&gt;  </span><br><span class="line">            二、判断题（每题2分）  </span><br><span class="line">            &lt;br /&gt;  </span><br><span class="line">            1.&lt;%=second%&gt;&lt;br/&gt;  </span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;确认完毕&quot;/&gt;  </span><br><span class="line">            &lt;a href=&quot;sessionTest1.jsp&quot;&gt;重新答题&lt;/a&gt;  </span><br><span class="line">        &lt;/form&gt;  </span><br><span class="line">&lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<img src="/images/session应用2.png" width="900" height="445">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;  </span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;  </span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;  </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;  </span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;  </span><br><span class="line">&lt;title&gt;session3&lt;/title&gt;  </span><br><span class="line">&lt;/head&gt;  </span><br><span class="line">&lt;body&gt;  </span><br><span class="line">&lt;%  </span><br><span class="line">        //获取考号  </span><br><span class="line">        //获取session中关键字是id的对象（考号）  </span><br><span class="line">        String id = (String) session.getAttribute(&quot;id&quot;);  </span><br><span class="line">        //计算成绩  </span><br><span class="line">        int sum = 0;  </span><br><span class="line">        //如果单项选择第一题选中D选项，得2分。  </span><br><span class="line">        //获取session中关键字是one的对象（选择答案）  </span><br><span class="line">        String first = (String) session.getAttribute(&quot;one&quot;);  </span><br><span class="line">        if (&quot;D&quot;.equals(first)) &#123;  </span><br><span class="line">            sum += 2;  </span><br><span class="line">        &#125;  </span><br><span class="line">        //如果判断第一题选中True，得2分。  </span><br><span class="line">        //获取session中关键字是two的对象（判断答案）  </span><br><span class="line">        String second = (String) session.getAttribute(&quot;two&quot;);  </span><br><span class="line">        if (&quot;True&quot;.equals(second)) &#123;  </span><br><span class="line">            sum += 2;  </span><br><span class="line">        &#125;  </span><br><span class="line">    %&gt;  </span><br><span class="line">    您的成绩公布如下：  </span><br><span class="line">    &lt;table border=&quot;1&quot;&gt;  </span><br><span class="line">        &lt;tr&gt;  </span><br><span class="line">            &lt;th width=&quot;50%&quot;&gt;  </span><br><span class="line">                考号  </span><br><span class="line">            &lt;/th&gt;  </span><br><span class="line">            &lt;th width=&quot;50%&quot;&gt;  </span><br><span class="line">                成绩  </span><br><span class="line">            &lt;/th&gt;  </span><br><span class="line">        &lt;/tr&gt;  </span><br><span class="line">        &lt;tr&gt;  </span><br><span class="line">            &lt;td&gt;&lt;%=id%&gt;&lt;/td&gt;  </span><br><span class="line">            &lt;td align=&quot;right&quot;&gt;&lt;%=sum%&gt;&lt;/td&gt;  </span><br><span class="line">        &lt;/tr&gt;  </span><br><span class="line">    &lt;/table&gt;  </span><br><span class="line">&lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<img src="/images/session应用3.png" width="900" height="445">
+<h1 id="关于cookie"><a href="#关于cookie" class="headerlink" title="关于cookie"></a>关于cookie</h1><p>一些细节：</p>
+<ul>
+<li>一个cookie只能标识一种信息，至少含有标识该信息的名称和值</li>
+<li>浏览器一般只允许存放300个cookie，每个站点最多存放20个，每个cookie大小限制为4KB</li>
+<li>默认是会话级别cookie(存储于浏览器内存)，浏览器进程关闭则删除。有效期通过maxAge设置，存于硬盘，0表示删除</li>
+<li>删除cookie时，path必须一致，否则不会删除</li>
+</ul>
 
       
     </div>
@@ -416,6 +484,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web基础/" rel="tag"># web基础</a>
+          
+            <a href="/tags/JSP技术中的session/" rel="tag"># JSP技术中的session</a>
+          
+        </div>
       
 
       
@@ -516,8 +592,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,7 +632,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -558,7 +643,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -629,6 +714,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#session对象概要介绍"><span class="nav-number">1.</span> <span class="nav-text">session对象概要介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生命周期"><span class="nav-number">2.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#session对象的应用："><span class="nav-number">3.</span> <span class="nav-text">session对象的应用：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于cookie"><span class="nav-number">4.</span> <span class="nav-text">关于cookie</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
