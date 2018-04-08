@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Hyoyew">
 <meta property="og:description" content="request和response是什么?request是请求,在浏览器输入地址,回车,就是一个请求response是响应,服务器根据请求,返回数据到浏览器显示,就是一个响应">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-08T08:31:58.605Z">
+<meta property="og:updated_time" content="2018-04-08T08:40:46.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb入门笔记-4-request和response">
 <meta name="twitter:description" content="request和response是什么?request是请求,在浏览器输入地址,回车,就是一个请求response是响应,服务器根据请求,返回数据到浏览器显示,就是一个响应">
@@ -427,25 +427,24 @@
 <ol>
 <li>设置浏览器的编码<br><strong>让浏览器的编码和字节数组的编码一致</strong> 可有如下两种写法：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Content-type&quot;,&quot;text/html;charset=UTF-8&quot;)</span><br><span class="line">response.setContentType(&quot;text/html;charset=UTF-8&quot;)//默认调用setHeader和setCharacterEncoding</span><br></pre></td></tr></table></figure>
-<p>把分号<code>;</code>错写成逗号<code>,</code>，浏览器会提示下载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Content-type&quot;,&quot;text/html;charset=UTF-8&quot;)</span><br><span class="line">response.setContentType(&quot;text/html;charset=UTF-8&quot;)//默认调用setHeader和setCharacterEncoding</span><br><span class="line">//把分号`;`错写成逗号`,`，浏览器会提示下载</span><br></pre></td></tr></table></figure>
 <ol>
 <li>设置字节数组的编码<br>用html技术的<code>&lt;meta&gt;</code>标签可以模拟一个http响应头，<br><code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;/&gt;</code><br>response可用<code>setCharacterEncoding</code>方法设置码表。<br><strong>字符流输出</strong>：PrintWritet-&gt;response-&gt;浏览器,response-&gt;浏览器默认使用<code>iso-8859</code>编码</li>
 </ol>
 <h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><p>使用<code>ServerContext</code>的<code>getRealPath</code>方法,再<code>InputStream</code>和<code>OutputStream</code><br>如果下载文件是中文名为中文，则文件名需要经过<code>url</code>编码<code>URLEncoder.encode</code></p>
 <p>文件下载的基本实现的步骤<br>（0）设置头信息 <code>Content-Disposition</code>，无论是什么格式的文件都以下载方式打开<br>（1）在服务器上面有一个可以下载的文件<br>（2）从服务器上拿到这个文件（使用文件输入流得到文件）<br>（3）使用输出流把文件写到浏览器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public void doGet(HttpServletRequest request, HttpServletResponse response)</span><br><span class="line">throws ServletException, IOException &#123;</span><br><span class="line">//输入关联下载的资源</span><br><span class="line">String path = &quot;/download/a.zip&quot;;</span><br><span class="line">InputStream is = getServletContext().getResourceAsStream(path);</span><br><span class="line">int lastIndexOf = path.lastIndexOf(&quot;/&quot;);</span><br><span class="line">String filename = path.substring(lastIndexOf+1);</span><br><span class="line">response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot;+filename);</span><br><span class="line">OutputStream os = response.getOutputStream();</span><br><span class="line">int len = 0;</span><br><span class="line">byte[] b = new byte[8192];</span><br><span class="line">while ((len=is.read(b))!=-1) &#123;</span><br><span class="line">os.write(b, 0, len);</span><br><span class="line">&#125;</span><br><span class="line">is.close();</span><br><span class="line">os.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="随机图片"><a href="#随机图片" class="headerlink" title="随机图片"></a>随机图片</h2><p>使用<code>BufferedImage</code>在内存生成图片，再使用<code>ImageIO</code>输出。<br>画图使用<code>Graphics</code>,旋转使用<code>Graphics2D</code><br>汉字的区间：<code>\u4e00</code>-<code>\u9fa5</code></p>
-<h2 id="刷新和缓存"><a href="#刷新和缓存" class="headerlink" title="刷新和缓存"></a>刷新和缓存</h2><p>刷新：一般不在servlet里加refresh头，而是在jsp加入<meta>头模拟。<br>缓存：加入expires头,当前时间+要缓存的时长</p>
+<h2 id="刷新和缓存"><a href="#刷新和缓存" class="headerlink" title="刷新和缓存"></a>刷新和缓存</h2><p>刷新：一般不在servlet里加<code>refresh</code>头，而是在<code>jsp</code>加入<code>&lt;meta&gt;</code>头模拟。<br>缓存：加入<code>expires</code>头,当前时间+要缓存的时长</p>
 <h2 id="请求重定向"><a href="#请求重定向" class="headerlink" title="请求重定向"></a>请求重定向</h2><h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ol>
-<li>设置状态码和location头即可，或者直接使用response的sendRedirect方法。</li>
+<li>设置状态码和<code>location</code>头即可，或者直接使用<code>response</code>的<code>sendRedirect</code>方法。</li>
 <li>向服务器两次请求。</li>
 <li>浏览器会改变地址栏，一般适用于登录、购物等场景。</li>
 </ol>
 <h3 id="转发"><a href="#转发" class="headerlink" title="转发"></a>转发</h3><ol>
-<li>调用ServletContex对象的getRequestDispatcher方法，再调用forward方法。</li>
+<li>调用<code>ServletContex</code>对象的<code>getRequestDispatcher</code>方法，再调用<code>forward</code>方法。</li>
 <li>向服务器一次请求，浏览器地址栏不变。</li>
 </ol>
-<p>一些细节：</p>
+<p><strong>一些细节：</strong></p>
 <ul>
 <li><code>getOutputStream</code>和<code>getWriter</code>方法跟别用于输出二进制数据、输出文本数据的<code>ServletOutputStream</code>、<code>Printwriter</code>对象，这两个方法相互排斥，只能调用其中一个，否则抛<code>IllegalStateException</code>异常。</li>
 <li><code>response</code>的输出流会自己关闭。<code>Servlet的service</code>方法结束后，Servlet引擎会检查并调用<code>close</code>方法关闭该输出流对象。</li>
@@ -477,8 +476,8 @@ response.sendRedirect(contextPath + &quot;/index.jsp&quot;);
 <h2 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h2><p>url后面如果有中文数据，需要编码后再提交<br>表单提交的数据使用的码表和该页面的码表一致，而<code>getParameter</code>方法默认使用<code>ISO-8859</code>码表。</p>
 <p>解决：</p>
 <ul>
-<li>对于post提交的数据，在获取数据前要使用request对象的setCharacterEncoding设置码表。</li>
-<li>对于get提交的数据，只能手工解决。先对数据调用getBytes(“ISO-8859-1”)获取二进制字节，再用特定码表构建字符串。</li>
+<li>对于<code>post</code>提交的数据，在获取数据前要使用<code>request</code>对象的<code>setCharacterEncoding</code>设置码表。</li>
+<li>对于<code>get</code>提交的数据，只能手工解决。先对数据调用<code>getBytes(&quot;ISO-8859-1&quot;)</code>获取二进制字节，再用特定码表构建字符串。</li>
 <li>超链提交的中文，解决办法同get提交的数据。<br>也可以通过改服务器配置来解决乱码问题，但一般<strong>不建议使用</strong>。</li>
 <li><code>URIEncoding</code>:改tomcat的配置文件<code>conf/server.xml</code>的连接器<code>&lt;Connector&gt;</code>中的<code>URIEncoding</code>属性</li>
 <li><code>useBodyEncodingForURI</code>:将<code>conf/server.xml</code>的连接器<code>&lt;Connector&gt;</code>中的<code>useBodyEncodingForURI</code>置为<code>true</code>        </li>
@@ -495,15 +494,19 @@ response.sendRedirect(contextPath + &quot;/index.jsp&quot;);
 <li>跳转之前会清空response中的数据。即数据只是写入到缓冲区而没真正输出到客户端，则可调用forward方法，原来写入到缓冲区的内容被清空，但响应头字段信息保持。<br><code>include</code>方法可以用于包含一些公共页面(一般不在servlet中包含)</li>
 </ul>
 <h2 id="地址的写法"><a href="#地址的写法" class="headerlink" title="地址的写法"></a>地址的写法</h2><p>以斜杠<code>/</code>开头。如果是给服务器用，则<code>/</code>代表当前web应用；如果给浏览器用，则<code>/</code>代表网站。</p>
-<h1 id="拾遗"><a href="#拾遗" class="headerlink" title="拾遗"></a>拾遗</h1><p>1 使用字节流向页面输出<br>1、设置浏览器的编码<br>2、设置字节数组的编码<br>让浏览器的编码和字节数组的编码一致</p>
+<h1 id="拾遗"><a href="#拾遗" class="headerlink" title="拾遗"></a>拾遗</h1><p>1 使用<strong>字节流</strong>向页面输出<br>解决方法：</p>
+<ol>
+<li>设置浏览器的编码</li>
+<li>设置字节数组的编码<br>让浏览器的编码和字节数组的编码一致</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">response.setHeader(&quot;content-type&quot;, &quot;text/html; charset=UTF-8&quot;);</span><br><span class="line">response.getOutputStream().write(&quot;4.1 使用字节流向页面输出内容&quot;.getBytes(&quot;UTF-8&quot;));</span><br></pre></td></tr></table></figure>
-<p>2 使用字符流向页面输出<br>解决方法：</p>
+<p>2 使用<strong>字符流</strong>向页面输出<br>解决方法：</p>
 <ol>
 <li>设置response缓冲区的编码</li>
 <li>设置浏览器的编码<br>response缓冲区的编码和浏览器的编码一致</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">response.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">// &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">response.setHeader(&quot;content-type&quot;, &quot;text/html; charset=UTF-8&quot;);</span><br><span class="line">response.getWriter().write(&quot;4.2 使用字符流向页面输出内容&quot;);</span><br></pre></td></tr></table></figure>
-<p>字符流向页面输出中文乱码问题解决，简写方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">reesponse.setContentType(&quot;text/html; charset=UTF-8&quot;);</span><br><span class="line">response.getWriter().write(&quot;4.2 ,简写 ,使用字符流向页面输出内容&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>3 <strong>字符流向页面输出中文乱码问题解决</strong>，简写方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">reesponse.setContentType(&quot;text/html; charset=UTF-8&quot;);</span><br><span class="line">response.getWriter().write(&quot;4.2 ,简写 ,使用字符流向页面输出内容&quot;);</span><br></pre></td></tr></table></figure></p>
 <h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="https://blog.csdn.net/u011480946/article/details/53350288" target="_blank" rel="noopener">request和response总结 - CSDN博客  </a></p>
 <blockquote>
 <p>有价值的内容包括：<br>验证码的案例<br>设置定时跳转</p>
